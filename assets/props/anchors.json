@@ -1,0 +1,115 @@
+{
+  "canvas": [
+    1024,
+    1024
+  ],
+  "anchor": [
+    512,
+    1000
+  ],
+  "anchor_rule": "bottom-centre of the object",
+  "scale_rule": "draw at suggested_scale relative to the character sprites (1024 canvas, standing worker ~800px)",
+  "facing": "mirror horizontally around x=512 for the other side",
+  "sprites": {
+    "plant": {
+      "source": "props/_cand/plant_s1.png",
+      "height": 779,
+      "width": 487,
+      "bottom_center_anchor": [
+        512,
+        1000
+      ],
+      "suggested_scale": 0.822
+    },
+    "meeting_table": {
+      "source": "props/_cand/meeting_table_s3.png",
+      "height": 759,
+      "width": 704,
+      "bottom_center_anchor": [
+        512,
+        1000
+      ],
+      "suggested_scale": 0.619
+    },
+    "printer": {
+      "source": "props/_cand/printer_s1.png",
+      "height": 815,
+      "width": 535,
+      "bottom_center_anchor": [
+        512,
+        1000
+      ],
+      "suggested_scale": 0.81
+    },
+    "whiteboard": {
+      "source": "props/_cand/whiteboard_s1.png",
+      "height": 885,
+      "width": 601,
+      "bottom_center_anchor": [
+        512,
+        1000
+      ],
+      "suggested_scale": 0.972
+    },
+    "bookshelf": {
+      "source": "props/_cand/bookshelf_s1.png",
+      "height": 831,
+      "width": 516,
+      "bottom_center_anchor": [
+        512,
+        1000
+      ],
+      "suggested_scale": 1.083
+    },
+    "sofa": {
+      "source": "props/_cand/sofa_s1.png",
+      "height": 752,
+      "width": 670,
+      "bottom_center_anchor": [
+        512,
+        1000
+      ],
+      "suggested_scale": 0.572
+    },
+    "boxes": {
+      "source": "props/_cand/boxes_s3.png",
+      "height": 807,
+      "width": 606,
+      "bottom_center_anchor": [
+        512,
+        1000
+      ],
+      "suggested_scale": 0.52
+    },
+    "watercooler": {
+      "source": "props/_cand/watercooler_s1.png",
+      "height": 865,
+      "width": 437,
+      "bottom_center_anchor": [
+        512,
+        1000
+      ],
+      "suggested_scale": 0.832
+    },
+    "coffee_machine": {
+      "source": "props/_cand/coffee_machine_s3.png",
+      "height": 828,
+      "width": 674,
+      "bottom_center_anchor": [
+        512,
+        1000
+      ],
+      "suggested_scale": 0.773
+    },
+    "restroom_door": {
+      "source": "props/_cand/restroom_door_s1.png",
+      "height": 718,
+      "width": 290,
+      "bottom_center_anchor": [
+        512,
+        1000
+      ],
+      "suggested_scale": 1.393
+    }
+  }
+}

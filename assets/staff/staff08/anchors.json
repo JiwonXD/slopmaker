@@ -1,0 +1,93 @@
+{
+  "canvas": [
+    1024,
+    1024
+  ],
+  "anchor": [
+    512,
+    1000
+  ],
+  "look": "a young woman with a short silver-grey pixie cut, wearing a light sky-blue cardigan over a white top, dark grey trousers and dark shoes",
+  "sprites": {
+    "sit_type_a": {
+      "height": 786,
+      "feet_anchor": [
+        512,
+        1000
+      ],
+      "source": "sit_type_a_s5.png"
+    },
+    "sit_type_b": {
+      "height": 786,
+      "feet_anchor": [
+        512,
+        1000
+      ],
+      "source": "sit_type_b_s5.png"
+    },
+    "stand": {
+      "height": 801,
+      "feet_anchor": [
+        512,
+        1000
+      ],
+      "source": "stand_s1.png"
+    },
+    "walk_1": {
+      "height": 793,
+      "feet_anchor": [
+        512,
+        1000
+      ],
+      "source": "walk_1_s5.png"
+    },
+    "walk_2": {
+      "height": 800,
+      "feet_anchor": [
+        512,
+        1000
+      ],
+      "source": "walk_2_s5.png"
+    },
+    "drink": {
+      "height": 801,
+      "feet_anchor": [
+        512,
+        1000
+      ],
+      "source": "drink_s1.png"
+    },
+    "hold_cup": {
+      "height": 801,
+      "feet_anchor": [
+        512,
+        1000
+      ],
+      "source": "hold_cup_s1.png"
+    },
+    "talk": {
+      "height": 800,
+      "feet_anchor": [
+        512,
+        1000
+      ],
+      "source": "talk_s1.png"
+    },
+    "think": {
+      "height": 800,
+      "feet_anchor": [
+        512,
+        1000
+      ],
+      "source": "think_s5.png"
+    },
+    "stretch": {
+      "height": 893,
+      "feet_anchor": [
+        512,
+        1000
+      ],
+      "source": "stretch_s1.png"
+    }
+  }
+}

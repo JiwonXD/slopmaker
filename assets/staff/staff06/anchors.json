@@ -1,0 +1,93 @@
+{
+  "canvas": [
+    1024,
+    1024
+  ],
+  "anchor": [
+    512,
+    1000
+  ],
+  "look": "a young woman with pink hair tied in a high ponytail, wearing a white button shirt with dark brown suspenders, dark grey trousers and dark shoes",
+  "sprites": {
+    "sit_type_a": {
+      "height": 821,
+      "feet_anchor": [
+        512,
+        1000
+      ],
+      "source": "sit_type_a_s5.png"
+    },
+    "sit_type_b": {
+      "height": 821,
+      "feet_anchor": [
+        512,
+        1000
+      ],
+      "source": "sit_type_b_s5.png"
+    },
+    "stand": {
+      "height": 836,
+      "feet_anchor": [
+        512,
+        1000
+      ],
+      "source": "stand_s1.png"
+    },
+    "walk_1": {
+      "height": 827,
+      "feet_anchor": [
+        512,
+        1000
+      ],
+      "source": "walk_1_s5.png"
+    },
+    "walk_2": {
+      "height": 834,
+      "feet_anchor": [
+        512,
+        1000
+      ],
+      "source": "walk_2_s5.png"
+    },
+    "drink": {
+      "height": 836,
+      "feet_anchor": [
+        512,
+        1000
+      ],
+      "source": "drink_s1.png"
+    },
+    "hold_cup": {
+      "height": 836,
+      "feet_anchor": [
+        512,
+        1000
+      ],
+      "source": "hold_cup_s1.png"
+    },
+    "talk": {
+      "height": 836,
+      "feet_anchor": [
+        512,
+        1000
+      ],
+      "source": "talk_s1.png"
+    },
+    "think": {
+      "height": 834,
+      "feet_anchor": [
+        512,
+        1000
+      ],
+      "source": "think_s5.png"
+    },
+    "stretch": {
+      "height": 889,
+      "feet_anchor": [
+        512,
+        1000
+      ],
+      "source": "stretch_s1.png"
+    }
+  }
+}

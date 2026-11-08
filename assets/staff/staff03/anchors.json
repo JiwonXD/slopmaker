@@ -1,0 +1,93 @@
+{
+  "canvas": [
+    1024,
+    1024
+  ],
+  "anchor": [
+    512,
+    1000
+  ],
+  "look": "a young man with curly bright orange hair, wearing a red and cream plaid checkered button shirt, dark grey trousers and dark shoes",
+  "sprites": {
+    "sit_type_a": {
+      "height": 798,
+      "feet_anchor": [
+        512,
+        1000
+      ],
+      "source": "sit_type_a_s5.png"
+    },
+    "sit_type_b": {
+      "height": 796,
+      "feet_anchor": [
+        512,
+        1000
+      ],
+      "source": "sit_type_b_s5.png"
+    },
+    "stand": {
+      "height": 804,
+      "feet_anchor": [
+        512,
+        1000
+      ],
+      "source": "stand_s1.png"
+    },
+    "walk_1": {
+      "height": 805,
+      "feet_anchor": [
+        512,
+        1000
+      ],
+      "source": "walk_1_s5.png"
+    },
+    "walk_2": {
+      "height": 806,
+      "feet_anchor": [
+        512,
+        1000
+      ],
+      "source": "walk_2_s5.png"
+    },
+    "drink": {
+      "height": 804,
+      "feet_anchor": [
+        512,
+        1000
+      ],
+      "source": "drink_s1.png"
+    },
+    "hold_cup": {
+      "height": 804,
+      "feet_anchor": [
+        512,
+        1000
+      ],
+      "source": "hold_cup_s1.png"
+    },
+    "talk": {
+      "height": 804,
+      "feet_anchor": [
+        512,
+        1000
+      ],
+      "source": "talk_s1.png"
+    },
+    "think": {
+      "height": 807,
+      "feet_anchor": [
+        512,
+        1000
+      ],
+      "source": "think_s5.png"
+    },
+    "stretch": {
+      "height": 889,
+      "feet_anchor": [
+        512,
+        1000
+      ],
+      "source": "stretch_s1.png"
+    }
+  }
+}

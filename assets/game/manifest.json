@@ -1,0 +1,946 @@
+{
+  "canvas": [
+    256,
+    256
+  ],
+  "scale_from_source": 0.25,
+  "default_facing": "bottom-left",
+  "mirror_rule": "to face bottom-right, mirror horizontally around x = canvas/2 (anchors stay put)",
+  "anchor_rule": {
+    "character": "x = head centre, y = floor contact",
+    "object": "bottom-centre"
+  },
+  "walk": "2-frame loop walk_1 -> walk_2",
+  "typing": "sit_type_a <-> sit_type_b",
+  "staff": {
+    "staff01": {
+      "look": "pilot (char_typing_1)",
+      "poses": {
+        "stand": {
+          "file": "staff/staff01/stand.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 199.8
+        },
+        "sit_type_a": {
+          "file": "staff/staff01/sit_type_a.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 196.5
+        },
+        "sit_type_b": {
+          "file": "staff/staff01/sit_type_b.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 196.5
+        },
+        "walk_1": {
+          "file": "staff/staff01/walk_1.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 198.2
+        },
+        "walk_2": {
+          "file": "staff/staff01/walk_2.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 199.8
+        },
+        "drink": {
+          "file": "staff/staff01/drink.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 200.0
+        },
+        "hold_cup": {
+          "file": "staff/staff01/hold_cup.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 200.0
+        },
+        "talk": {
+          "file": "staff/staff01/talk.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 200.0
+        },
+        "think": {
+          "file": "staff/staff01/think.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 200.0
+        },
+        "stretch": {
+          "file": "staff/staff01/stretch.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 222.2
+        }
+      }
+    },
+    "staff02": {
+      "look": "a young woman with a chin-length brown bob haircut, wearing a mustard yellow knit sweater, dark grey trousers and dark shoes",
+      "poses": {
+        "stand": {
+          "file": "staff/staff02/stand.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 200.0
+        },
+        "sit_type_a": {
+          "file": "staff/staff02/sit_type_a.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 196.5
+        },
+        "sit_type_b": {
+          "file": "staff/staff02/sit_type_b.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 196.5
+        },
+        "walk_1": {
+          "file": "staff/staff02/walk_1.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 198.2
+        },
+        "walk_2": {
+          "file": "staff/staff02/walk_2.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 200.0
+        },
+        "drink": {
+          "file": "staff/staff02/drink.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 200.0
+        },
+        "hold_cup": {
+          "file": "staff/staff02/hold_cup.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 200.0
+        },
+        "talk": {
+          "file": "staff/staff02/talk.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 200.0
+        },
+        "think": {
+          "file": "staff/staff02/think.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 200.0
+        },
+        "stretch": {
+          "file": "staff/staff02/stretch.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 222.2
+        }
+      }
+    },
+    "staff03": {
+      "look": "a young man with curly bright orange hair, wearing a red and cream plaid checkered button shirt, dark grey trousers and dark shoes",
+      "poses": {
+        "stand": {
+          "file": "staff/staff03/stand.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 201.0
+        },
+        "sit_type_a": {
+          "file": "staff/staff03/sit_type_a.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 199.5
+        },
+        "sit_type_b": {
+          "file": "staff/staff03/sit_type_b.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 199.0
+        },
+        "walk_1": {
+          "file": "staff/staff03/walk_1.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 201.2
+        },
+        "walk_2": {
+          "file": "staff/staff03/walk_2.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 201.5
+        },
+        "drink": {
+          "file": "staff/staff03/drink.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 201.0
+        },
+        "hold_cup": {
+          "file": "staff/staff03/hold_cup.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 201.0
+        },
+        "talk": {
+          "file": "staff/staff03/talk.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 201.0
+        },
+        "think": {
+          "file": "staff/staff03/think.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 201.8
+        },
+        "stretch": {
+          "file": "staff/staff03/stretch.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 222.2
+        }
+      }
+    },
+    "staff04": {
+      "look": "a young woman with long straight black hair falling past the shoulders, wearing a navy blue blazer over a white top, dark grey trousers and dark shoes",
+      "poses": {
+        "stand": {
+          "file": "staff/staff04/stand.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 200.0
+        },
+        "sit_type_a": {
+          "file": "staff/staff04/sit_type_a.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 196.5
+        },
+        "sit_type_b": {
+          "file": "staff/staff04/sit_type_b.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 196.8
+        },
+        "walk_1": {
+          "file": "staff/staff04/walk_1.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 198.2
+        },
+        "walk_2": {
+          "file": "staff/staff04/walk_2.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 200.0
+        },
+        "drink": {
+          "file": "staff/staff04/drink.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 200.0
+        },
+        "hold_cup": {
+          "file": "staff/staff04/hold_cup.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 200.0
+        },
+        "talk": {
+          "file": "staff/staff04/talk.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 200.0
+        },
+        "think": {
+          "file": "staff/staff04/think.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 200.0
+        },
+        "stretch": {
+          "file": "staff/staff04/stretch.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 223.0
+        }
+      }
+    },
+    "staff05": {
+      "look": "a young man with a completely bald shaved head and no hair, wearing a green crewneck sweatshirt and big over-ear headphones on his head, dark grey trousers and dark shoes",
+      "poses": {
+        "stand": {
+          "file": "staff/staff05/stand.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 200.8
+        },
+        "sit_type_a": {
+          "file": "staff/staff05/sit_type_a.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 198.2
+        },
+        "sit_type_b": {
+          "file": "staff/staff05/sit_type_b.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 198.2
+        },
+        "walk_1": {
+          "file": "staff/staff05/walk_1.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 199.5
+        },
+        "walk_2": {
+          "file": "staff/staff05/walk_2.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 200.5
+        },
+        "drink": {
+          "file": "staff/staff05/drink.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 200.8
+        },
+        "hold_cup": {
+          "file": "staff/staff05/hold_cup.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 201.2
+        },
+        "talk": {
+          "file": "staff/staff05/talk.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 200.8
+        },
+        "think": {
+          "file": "staff/staff05/think.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 200.8
+        },
+        "stretch": {
+          "file": "staff/staff05/stretch.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 222.2
+        }
+      }
+    },
+    "staff06": {
+      "look": "a young woman with pink hair tied in a high ponytail, wearing a white button shirt with dark brown suspenders, dark grey trousers and dark shoes",
+      "poses": {
+        "stand": {
+          "file": "staff/staff06/stand.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 209.0
+        },
+        "sit_type_a": {
+          "file": "staff/staff06/sit_type_a.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 205.2
+        },
+        "sit_type_b": {
+          "file": "staff/staff06/sit_type_b.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 205.2
+        },
+        "walk_1": {
+          "file": "staff/staff06/walk_1.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 206.8
+        },
+        "walk_2": {
+          "file": "staff/staff06/walk_2.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 208.5
+        },
+        "drink": {
+          "file": "staff/staff06/drink.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 209.0
+        },
+        "hold_cup": {
+          "file": "staff/staff06/hold_cup.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 209.0
+        },
+        "talk": {
+          "file": "staff/staff06/talk.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 209.0
+        },
+        "think": {
+          "file": "staff/staff06/think.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 208.5
+        },
+        "stretch": {
+          "file": "staff/staff06/stretch.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 222.2
+        }
+      }
+    },
+    "staff07": {
+      "look": "a young man with long dark brown hair tied back in a low ponytail and a short full beard, wearing a plain black short-sleeve t-shirt, dark grey trousers and dark shoes",
+      "poses": {
+        "stand": {
+          "file": "staff/staff07/stand.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 200.0
+        },
+        "sit_type_a": {
+          "file": "staff/staff07/sit_type_a.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 196.2
+        },
+        "sit_type_b": {
+          "file": "staff/staff07/sit_type_b.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 196.2
+        },
+        "walk_1": {
+          "file": "staff/staff07/walk_1.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 198.0
+        },
+        "walk_2": {
+          "file": "staff/staff07/walk_2.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 199.8
+        },
+        "drink": {
+          "file": "staff/staff07/drink.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 200.0
+        },
+        "hold_cup": {
+          "file": "staff/staff07/hold_cup.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 200.0
+        },
+        "talk": {
+          "file": "staff/staff07/talk.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 200.0
+        },
+        "think": {
+          "file": "staff/staff07/think.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 199.8
+        },
+        "stretch": {
+          "file": "staff/staff07/stretch.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 222.2
+        }
+      }
+    },
+    "staff08": {
+      "look": "a young woman with a short silver-grey pixie cut, wearing a light sky-blue cardigan over a white top, dark grey trousers and dark shoes",
+      "poses": {
+        "stand": {
+          "file": "staff/staff08/stand.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 200.2
+        },
+        "sit_type_a": {
+          "file": "staff/staff08/sit_type_a.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 196.5
+        },
+        "sit_type_b": {
+          "file": "staff/staff08/sit_type_b.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 196.5
+        },
+        "walk_1": {
+          "file": "staff/staff08/walk_1.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 198.2
+        },
+        "walk_2": {
+          "file": "staff/staff08/walk_2.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 200.0
+        },
+        "drink": {
+          "file": "staff/staff08/drink.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 200.2
+        },
+        "hold_cup": {
+          "file": "staff/staff08/hold_cup.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 200.2
+        },
+        "talk": {
+          "file": "staff/staff08/talk.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 200.0
+        },
+        "think": {
+          "file": "staff/staff08/think.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 200.0
+        },
+        "stretch": {
+          "file": "staff/staff08/stretch.webp",
+          "anchor": [
+            128,
+            250
+          ],
+          "height": 223.2
+        }
+      }
+    }
+  },
+  "props": {
+    "chair": {
+      "file": "props/chair.webp",
+      "anchor": [
+        136,
+        254
+      ],
+      "height": 152.5,
+      "suggested_scale": 1.0,
+      "facing": "bottom-left",
+      "flip": false,
+      "note": "registered with sit_type_*: draw chair canvas at the same position as the sitting worker's canvas (scale 1.0)"
+    },
+    "desk": {
+      "file": "props/desk.webp",
+      "anchor": [
+        128,
+        250
+      ],
+      "height": 203.8,
+      "suggested_scale": 1.2,
+      "facing": "bottom-left",
+      "flip": false
+    },
+    "desk_front": {
+      "file": "props/desk_front.webp",
+      "anchor": [
+        128,
+        250
+      ],
+      "height": 202.0,
+      "suggested_scale": 1.2,
+      "facing": "bottom-right",
+      "flip": true
+    },
+    "plant": {
+      "file": "props/plant.webp",
+      "anchor": [
+        128,
+        250
+      ],
+      "height": 194.8,
+      "width": 121.8,
+      "suggested_scale": 0.822,
+      "display_height": 160.1,
+      "facing": "none",
+      "flip": false
+    },
+    "meeting_table": {
+      "file": "props/meeting_table.webp",
+      "anchor": [
+        128,
+        250
+      ],
+      "height": 189.8,
+      "width": 176.0,
+      "suggested_scale": 0.619,
+      "display_height": 117.5,
+      "facing": "none",
+      "flip": false
+    },
+    "printer": {
+      "file": "props/printer.webp",
+      "anchor": [
+        128,
+        250
+      ],
+      "height": 203.8,
+      "width": 133.8,
+      "suggested_scale": 0.81,
+      "display_height": 165.0,
+      "facing": "bottom-left",
+      "flip": false
+    },
+    "whiteboard": {
+      "file": "props/whiteboard.webp",
+      "anchor": [
+        128,
+        250
+      ],
+      "height": 221.2,
+      "width": 150.2,
+      "suggested_scale": 0.972,
+      "display_height": 215.1,
+      "facing": "bottom-right",
+      "flip": true
+    },
+    "bookshelf": {
+      "file": "props/bookshelf.webp",
+      "anchor": [
+        128,
+        250
+      ],
+      "height": 207.8,
+      "width": 129.0,
+      "suggested_scale": 1.083,
+      "display_height": 225.0,
+      "facing": "bottom-left",
+      "flip": false
+    },
+    "sofa": {
+      "file": "props/sofa.webp",
+      "anchor": [
+        128,
+        250
+      ],
+      "height": 188.0,
+      "width": 167.5,
+      "suggested_scale": 0.572,
+      "display_height": 107.5,
+      "facing": "bottom-left",
+      "flip": false
+    },
+    "boxes": {
+      "file": "props/boxes.webp",
+      "anchor": [
+        128,
+        250
+      ],
+      "height": 201.8,
+      "width": 151.5,
+      "suggested_scale": 0.52,
+      "display_height": 104.9,
+      "facing": "none",
+      "flip": false
+    },
+    "watercooler": {
+      "file": "props/watercooler.webp",
+      "anchor": [
+        128,
+        250
+      ],
+      "height": 216.2,
+      "width": 109.2,
+      "suggested_scale": 0.832,
+      "display_height": 179.9,
+      "facing": "bottom-left",
+      "flip": false
+    },
+    "coffee_machine": {
+      "file": "props/coffee_machine.webp",
+      "anchor": [
+        128,
+        250
+      ],
+      "height": 207.0,
+      "width": 168.5,
+      "suggested_scale": 0.773,
+      "display_height": 160.0,
+      "facing": "bottom-left",
+      "flip": false
+    },
+    "restroom_door": {
+      "file": "props/restroom_door.webp",
+      "anchor": [
+        128,
+        250
+      ],
+      "height": 179.5,
+      "width": 72.5,
+      "suggested_scale": 1.393,
+      "display_height": 250.0,
+      "facing": "bottom-right",
+      "flip": true
+    }
+  },
+  "ai": {
+    "ai_lite": {
+      "file": "ai/ai_lite.webp",
+      "anchor": [
+        128,
+        250
+      ],
+      "height": 217.5,
+      "width": 99.2,
+      "suggested_scale": 0.874,
+      "display_height": 190.1,
+      "facing": "bottom-left",
+      "flip": false
+    },
+    "ai_code": {
+      "file": "ai/ai_code.webp",
+      "anchor": [
+        128,
+        250
+      ],
+      "height": 217.5,
+      "width": 99.2,
+      "suggested_scale": 1.207,
+      "display_height": 262.5,
+      "facing": "bottom-left",
+      "flip": false
+    },
+    "ai_pixel": {
+      "file": "ai/ai_pixel.webp",
+      "anchor": [
+        128,
+        250
+      ],
+      "height": 217.5,
+      "width": 119.5,
+      "suggested_scale": 1.207,
+      "display_height": 262.5,
+      "facing": "bottom-left",
+      "flip": false
+    },
+    "ai_mega": {
+      "file": "ai/ai_mega.webp",
+      "anchor": [
+        128,
+        250
+      ],
+      "height": 245.0,
+      "width": 160.2,
+      "suggested_scale": 1.276,
+      "display_height": 312.6,
+      "facing": "bottom-left",
+      "flip": false
+    },
+    "ai_check": {
+      "file": "ai/ai_check.webp",
+      "anchor": [
+        128,
+        250
+      ],
+      "height": 217.5,
+      "width": 135.2,
+      "suggested_scale": 1.207,
+      "display_height": 262.5,
+      "facing": "bottom-left",
+      "flip": false
+    }
+  },
+  "layouts": {
+    "workstation": {
+      "layers_back_to_front": [
+        "props/chair",
+        "staff/<id>/sit_type_a|sit_type_b",
+        "props/desk"
+      ],
+      "worker_and_chair": "same position, scale 1.0",
+      "desk_scale": 1.2,
+      "desk_anchor_minus_worker_anchor": [
+        -75.0,
+        75.0
+      ],
+      "mirrored": "negate desk offset x and mirror all three sprites"
+    }
+  }
+}

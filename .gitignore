@@ -1,0 +1,28 @@
+# AI art working files (keep only final assets in git)
+assets/_styletest/
+assets/_raw/
+assets/**/_raw/
+
+# Node / build
+node_modules/
+dist/
+build/
+.vite/
+coverage/
+
+# Env / OS / editor
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.log
+
+# generation candidates / review sheets
+**/_cand/
+**/_sheet*.png
+**/_*_stdout.txt
+**/_batch_log.txt

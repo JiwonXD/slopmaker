@@ -1,0 +1,233 @@
+{
+  "canvas": [
+    1024,
+    1024
+  ],
+  "anchor": [
+    512,
+    1000
+  ],
+  "stand_height": 799,
+  "rules": {
+    "facing": "all sprites drawn facing bottom-left; right-facing = mirror horizontally around x=512 (anchors unchanged, chair+sit stay registered, negate desk offset x). No back views.",
+    "walk": "2-frame loop walk_1 (contact) -> walk_2 (passing). Qwen-Image-Edit cannot alternate which leg is forward (left/right-leg prompts give identical frames), so no 4-frame cycle.",
+    "typing": "sit_type_a <-> sit_type_b (hands differ slightly)"
+  },
+  "sprites": {
+    "sit_type_a": {
+      "source": "pilot/_cand/sit_type_a_s1.png",
+      "scale": 1.0,
+      "raw_height": 786,
+      "src_feet": [
+        535,
+        889
+      ],
+      "height": 786,
+      "feet_anchor": [
+        512,
+        1000
+      ]
+    },
+    "sit_type_b": {
+      "source": "pilot/_cand/sit_type_b_s1.png",
+      "scale": 1.0,
+      "raw_height": 786,
+      "src_feet": [
+        535,
+        889
+      ],
+      "height": 786,
+      "feet_anchor": [
+        512,
+        1000
+      ]
+    },
+    "stand": {
+      "source": "pilot/_cand/stand_s1.png",
+      "scale": 1.0,
+      "raw_height": 799,
+      "src_feet": [
+        535,
+        902
+      ],
+      "height": 799,
+      "feet_anchor": [
+        512,
+        1000
+      ]
+    },
+    "walk_1": {
+      "source": "pilot/_cand/walk_1_s1.png",
+      "scale": 1.0,
+      "raw_height": 793,
+      "src_feet": [
+        535,
+        896
+      ],
+      "height": 793,
+      "feet_anchor": [
+        512,
+        1000
+      ]
+    },
+    "walk_2": {
+      "source": "pilot/_cand/walk_2_s1.png",
+      "scale": 1.0,
+      "raw_height": 799,
+      "src_feet": [
+        535,
+        902
+      ],
+      "height": 799,
+      "feet_anchor": [
+        512,
+        1000
+      ]
+    },
+    "drink": {
+      "source": "pilot/_cand/drink_s1.png",
+      "scale": 1.0,
+      "raw_height": 800,
+      "src_feet": [
+        535,
+        903
+      ],
+      "height": 800,
+      "feet_anchor": [
+        512,
+        1000
+      ]
+    },
+    "hold_cup": {
+      "source": "pilot/_cand/hold_cup_s1.png",
+      "scale": 1.0,
+      "raw_height": 800,
+      "src_feet": [
+        535,
+        903
+      ],
+      "height": 800,
+      "feet_anchor": [
+        512,
+        1000
+      ]
+    },
+    "talk": {
+      "source": "pilot/_cand/talk_s1.png",
+      "scale": 1.0,
+      "raw_height": 800,
+      "src_feet": [
+        535,
+        903
+      ],
+      "height": 800,
+      "feet_anchor": [
+        512,
+        1000
+      ]
+    },
+    "think": {
+      "source": "pilot/_cand/think_s1.png",
+      "scale": 1.0,
+      "raw_height": 800,
+      "src_feet": [
+        535,
+        903
+      ],
+      "height": 800,
+      "feet_anchor": [
+        512,
+        1000
+      ]
+    },
+    "stretch": {
+      "source": "pilot/_cand/stretch2_s33.png",
+      "scale": 1.0,
+      "raw_height": 889,
+      "src_feet": [
+        525,
+        962
+      ],
+      "height": 889,
+      "feet_anchor": [
+        512,
+        1000
+      ]
+    },
+    "chair": {
+      "source": "pilot/_cand/chair_s1.png",
+      "height": 610,
+      "feet_anchor": [
+        542,
+        1016
+      ],
+      "note": "same translation as sit_type_a: draw chair and sit_type_* at the same position"
+    },
+    "desk": {
+      "source": "pilot/_cand/desk_back_s22.png (mirrored)",
+      "height": 815,
+      "width": 671,
+      "bottom_center_anchor": [
+        512,
+        1000
+      ]
+    },
+    "desk_front": {
+      "source": "_styletest/desk_monitor_2.png",
+      "height": 808,
+      "width": 672,
+      "bottom_center_anchor": [
+        512,
+        1000
+      ]
+    },
+    "watercooler": {
+      "source": "pilot/_cand/watercooler_s1.png",
+      "height": 812,
+      "width": 438,
+      "bottom_center_anchor": [
+        512,
+        1000
+      ]
+    },
+    "coffee_machine": {
+      "source": "pilot/_cand/coffee_machine_s1.png",
+      "height": 809,
+      "width": 507,
+      "bottom_center_anchor": [
+        512,
+        1000
+      ]
+    },
+    "restroom_door": {
+      "source": "pilot/_cand/restroom_door_s1.png",
+      "height": 763,
+      "width": 311,
+      "bottom_center_anchor": [
+        512,
+        1000
+      ]
+    },
+    "_composite": {
+      "layer_order": [
+        "chair",
+        "sit_type_a",
+        "desk"
+      ],
+      "worker_canvas_at": [
+        480,
+        0
+      ],
+      "desk_scale": 1.2,
+      "desk_canvas_at": [
+        78,
+        100
+      ],
+      "desk_bottom_center_minus_worker_feet": [
+        -300,
+        300
+      ],
+      "note": "desk drawn at desk_scale relative to the 1024 character canvas"
+    }
+  }
+}

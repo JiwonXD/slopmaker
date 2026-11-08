@@ -1,0 +1,93 @@
+{
+  "canvas": [
+    1024,
+    1024
+  ],
+  "anchor": [
+    512,
+    1000
+  ],
+  "look": "pilot (char_typing_1)",
+  "sprites": {
+    "sit_type_a": {
+      "height": 786,
+      "feet_anchor": [
+        512,
+        1000
+      ],
+      "source": "pilot/_cand/sit_type_a_s1.png"
+    },
+    "sit_type_b": {
+      "height": 786,
+      "feet_anchor": [
+        512,
+        1000
+      ],
+      "source": "pilot/_cand/sit_type_b_s1.png"
+    },
+    "stand": {
+      "height": 799,
+      "feet_anchor": [
+        512,
+        1000
+      ],
+      "source": "pilot/_cand/stand_s1.png"
+    },
+    "walk_1": {
+      "height": 793,
+      "feet_anchor": [
+        512,
+        1000
+      ],
+      "source": "pilot/_cand/walk_1_s1.png"
+    },
+    "walk_2": {
+      "height": 799,
+      "feet_anchor": [
+        512,
+        1000
+      ],
+      "source": "pilot/_cand/walk_2_s1.png"
+    },
+    "drink": {
+      "height": 800,
+      "feet_anchor": [
+        512,
+        1000
+      ],
+      "source": "pilot/_cand/drink_s1.png"
+    },
+    "hold_cup": {
+      "height": 800,
+      "feet_anchor": [
+        512,
+        1000
+      ],
+      "source": "pilot/_cand/hold_cup_s1.png"
+    },
+    "talk": {
+      "height": 800,
+      "feet_anchor": [
+        512,
+        1000
+      ],
+      "source": "pilot/_cand/talk_s1.png"
+    },
+    "think": {
+      "height": 800,
+      "feet_anchor": [
+        512,
+        1000
+      ],
+      "source": "pilot/_cand/think_s1.png"
+    },
+    "stretch": {
+      "height": 889,
+      "feet_anchor": [
+        512,
+        1000
+      ],
+      "source": "pilot/_cand/stretch2_s33.png"
+    }
+  }
+}

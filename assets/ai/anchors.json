@@ -1,0 +1,65 @@
+{
+  "canvas": [
+    1024,
+    1024
+  ],
+  "anchor": [
+    512,
+    1000
+  ],
+  "anchor_rule": "bottom-centre of the object",
+  "scale_rule": "draw at suggested_scale relative to the character sprites (1024 canvas, standing worker ~800px)",
+  "facing": "mirror horizontally around x=512 for the other side",
+  "sprites": {
+    "ai_lite": {
+      "source": "ai/_cand/ai_lite_s2.png (mirrored)",
+      "height": 870,
+      "width": 397,
+      "bottom_center_anchor": [
+        512,
+        1000
+      ],
+      "suggested_scale": 0.874
+    },
+    "ai_code": {
+      "source": "ai/_cand/ai_code_s1.png (mirrored)",
+      "height": 870,
+      "width": 397,
+      "bottom_center_anchor": [
+        512,
+        1000
+      ],
+      "suggested_scale": 1.207
+    },
+    "ai_pixel": {
+      "source": "ai/_cand/ai_pixel_s2.png (mirrored)",
+      "height": 870,
+      "width": 478,
+      "bottom_center_anchor": [
+        512,
+        1000
+      ],
+      "suggested_scale": 1.207
+    },
+    "ai_mega": {
+      "source": "ai/_cand/ai_mega_s3.png (mirrored)",
+      "height": 980,
+      "width": 641,
+      "bottom_center_anchor": [
+        512,
+        1000
+      ],
+      "suggested_scale": 1.276
+    },
+    "ai_check": {
+      "source": "ai/_cand/ai_check_s1.png (mirrored)",
+      "height": 870,
+      "width": 541,
+      "bottom_center_anchor": [
+        512,
+        1000
+      ],
+      "suggested_scale": 1.207
+    }
+  }
+}
