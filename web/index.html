@@ -313,6 +313,79 @@ input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;bac
 .coach-tip .steps i.on{background:var(--coral)}
 .coach-tip .r{display:flex;justify-content:space-between;align-items:center}
 
+/* ---------- 게임 설명 ---------- */
+.guide{position:fixed;inset:0;z-index:62;word-break:keep-all;display:grid;place-items:center;background:color-mix(in oklch,var(--ink) 55%,transparent);animation:gfade .3s var(--ease) both}
+.guide.out{animation:gout .22s var(--ease-in) both}
+@keyframes gfade{from{opacity:0}}
+@keyframes gout{to{opacity:0}}
+.guide .card{width:min(720px,calc(100% - 32px));height:min(480px,calc(100% - 48px));background:var(--paper);border:3px solid var(--ink);border-radius:24px;box-shadow:0 8px 0 var(--ink);overflow:hidden;display:flex;flex-direction:column;animation:rise .5s var(--ease) both}
+.guide .ribbon h2{font-size:24px}
+.guide .ribbon .sub{margin-left:auto;font-family:var(--display);font-size:14px}
+.gbody{flex:1;overflow:auto;padding:20px 26px;scrollbar-width:thin}
+.gpage{display:flex;flex-direction:column;gap:18px;animation:gin .35s var(--ease) both}
+.gpage.back{animation-name:gback}
+@keyframes gin{from{opacity:0;transform:translateX(22px)}}
+@keyframes gback{from{opacity:0;transform:translateX(-22px)}}
+.gpage .lead{margin:0;font-family:var(--display);font-weight:400;font-size:23px;line-height:1.25}
+.gpage .lead em{font-style:normal;color:var(--coral)}
+.gnote{display:flex;align-items:center;gap:8px;color:var(--ink-2);font-size:13px}
+.gnote .ic{color:var(--ink-3)}
+.ladder{display:flex;align-items:flex-end;gap:8px;height:190px}
+.lv{flex:1;height:var(--h);display:flex;flex-direction:column;justify-content:flex-end;gap:4px;padding:10px;border:2.5px solid var(--ink);border-radius:14px 14px 6px 6px;background:var(--paper-2);box-shadow:0 3px 0 var(--ink);transform-origin:bottom;animation:grow .55s var(--ease) both}
+.lv:first-child{background:var(--sun)}
+.lv:last-child{background:repeating-linear-gradient(-45deg,var(--coral) 0 12px,var(--coral-hi) 12px 24px);color:var(--paper)}
+.lv b{font-family:var(--display);font-weight:400;font-size:16px;line-height:1.1}
+.lv .fact{font-size:13px;color:inherit}.lv .fact .ic{color:inherit}
+@keyframes grow{from{transform:scaleY(.2);opacity:0}}
+.gfacts{display:flex;gap:22px}
+.gfact{display:flex;align-items:center;gap:8px}
+.gfact .ic{width:22px;height:22px;color:var(--ink-2)}
+.gfact b{font-family:var(--display);font-weight:400;font-size:17px}
+.gfact span{font-size:13px;color:var(--ink-2)}
+.flow{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;position:relative}
+.flow::before{content:"";position:absolute;left:10%;right:10%;top:29px;border-top:3px dashed var(--ink-3)}
+.fs{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px;animation:gin .4s var(--ease) both}
+.fs .bub{width:60px;height:60px;border-radius:18px;border:2.5px solid var(--ink);background:var(--paper);box-shadow:0 3px 0 var(--ink);display:grid;place-items:center}
+.fs .bub .ic{width:28px;height:28px}
+.fs .no{position:absolute;top:-8px;left:calc(50% + 18px);width:22px;height:22px;border-radius:50%;background:var(--ink);color:var(--paper);font-family:var(--display);font-size:12px;display:grid;place-items:center}
+.fs b{font-family:var(--display);font-weight:400;font-size:17px;display:flex;align-items:center;gap:5px}
+.fs p{margin:0;font-size:12.5px;line-height:1.35;color:var(--ink-2)}
+.kc{display:inline-grid;place-items:center;min-width:24px;height:24px;padding:0 6px;font-family:var(--display);font-size:12px;line-height:1;color:var(--ink);background:var(--paper);border:1.5px solid var(--ink-2);border-bottom-width:4px;border-radius:6px}
+.gbar{height:14px;border-radius:9px;border:2.5px solid var(--ink);background:linear-gradient(90deg,var(--sky),var(--slime))}
+.gbar-ends{display:flex;justify-content:space-between;margin-top:6px;font-family:var(--display);font-size:15px}
+.gbar-ends span{display:flex;align-items:center;gap:6px}
+.vs{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
+.vs > div{padding:12px 14px;border-radius:16px;background:color-mix(in oklch,var(--c) 30%,var(--paper))}
+.vs ul{margin:6px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:6px}
+.vs li{display:flex;align-items:center;gap:8px;font-size:14px}
+.vs li .ic{width:16px;height:16px}
+.vs li.bad .ic{color:var(--bad)}
+.vs li.good .ic{color:oklch(52% 0.13 162)}
+.vs h3{margin:0;font-family:var(--display);font-weight:400;font-size:18px;display:flex;align-items:center;gap:6px}
+.glist{display:grid;grid-template-columns:40px minmax(0,1fr);gap:10px 12px;align-items:center}
+.glist .gi{width:40px;height:40px;border-radius:12px;border:2px solid var(--ink);background:var(--paper-2);display:grid;place-items:center}
+.glist .gi .ic{width:22px;height:22px}
+.glist b{font-family:var(--display);font-weight:400;font-size:17px;margin-right:8px}
+.glist span{font-size:13px;color:var(--ink-2)}
+.gsect{display:flex;align-items:center;gap:6px;font-family:var(--display);font-size:15px;color:var(--ink-2)}
+.gsect .ic{width:16px;height:16px}
+.gtags{display:flex;flex-wrap:wrap;gap:8px}
+.gtag{display:inline-flex;align-items:center;gap:6px;height:32px;padding:0 10px 0 5px;border-radius:10px;border:2px solid var(--ink-3);font-family:var(--display);font-size:14px}
+.gtag > .ic{width:16px;height:16px;margin-left:3px}
+.gtwo{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px}
+.gtwo > div{display:flex;flex-direction:column;gap:10px}
+.gtwo h3{margin:0;font-family:var(--display);font-weight:400;font-size:19px;display:flex;align-items:center;gap:8px}
+.gtwo p{margin:0;display:flex;align-items:flex-start;gap:8px;font-size:13.5px;line-height:1.4;color:var(--ink-2)}
+.gtwo p .ic{width:16px;height:16px;margin-top:1px;color:var(--ink-3)}
+.keys{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px 28px}
+.keys div{display:flex;align-items:center;gap:6px;padding-bottom:8px;border-bottom:2px dashed var(--paper-3)}
+.keys div b{font-family:var(--display);font-weight:400;font-size:16px;margin-left:6px}
+.gsteps{display:flex;gap:5px}
+.gsteps button{width:22px;height:8px;border-radius:5px;background:var(--paper-3);transition:background .2s var(--ease)}
+.gsteps button.on{background:var(--coral)}
+.gsteps button:hover{background:var(--ink-3)}
+.gsteps button.on:hover{background:var(--coral)}
+
 /* ---------- 엔딩 ---------- */
 .end{position:fixed;inset:0;z-index:50;display:grid;place-items:center;background:color-mix(in oklch,var(--ink) 60%,transparent)}
 .end[hidden]{display:none!important}
@@ -378,6 +451,7 @@ input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;bac
   <symbol id="i-cont" viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 2.4-5.7M4 4v4h4"/></symbol>
   <symbol id="i-desk" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></symbol>
   <symbol id="i-flag" viewBox="0 0 24 24"><path d="M5 21V4M5 4h11l-2 4 2 4H5"/></symbol>
+  <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.4a2.5 2.5 0 1 1 3.4 2.4c-.7.3-1 .8-1 1.6v.4M12 17v.2"/></symbol>
 </svg>
 
 <canvas id="scene"></canvas>
@@ -409,6 +483,7 @@ input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;bac
   <button class="db" data-drawer="ai" data-tip="AI 구독|R"><svg class="ic"><use href="#i-bot"/></svg><span class="k">R</span></button>
   <span class="sep"></span>
   <button class="db" data-drawer="log" data-tip="회사 기록|T"><svg class="ic"><use href="#i-log"/></svg><span class="k">T</span></button>
+  <button class="db" data-guide data-tip="게임 설명|H"><svg class="ic"><use href="#i-help"/></svg><span class="k">H</span></button>
 </nav>
 
 <div class="decision" id="decision" role="dialog" aria-live="polite"></div>
@@ -1285,7 +1360,7 @@ const OFF = (()=>{
 const SPEEDS = [0,1,2,4];
 let speed = 1, lastSpeed = 1, weekAcc = 0, started = false;
 const WEEK_SEC = 10;   // 1배속 기준 1주 = 10초 (3년 144주 = 약 24분)
-function running(){ return started && !S.over && speed>0 && !$('#decision').classList.contains('open') && !coachOn; }
+function running(){ return started && !S.over && speed>0 && !$('#decision').classList.contains('open') && !coachOn && !guideOn; }
 function gameClock(dt){
   if(running()){ weekAcc += dt*SPEEDS[speed]/WEEK_SEC; if(weekAcc>=1){ weekAcc=0; tick(); } }
   $('#wkbar').style.transform = `scaleX(${weekAcc})`;
@@ -1551,6 +1626,7 @@ document.addEventListener('click', e=>{
   const g = (sel)=>e.target.closest(sel);
   let b;
   if(b=g('[data-spd]')) return setSpeed(+b.dataset.spd);
+  if(b=g('[data-guide]')) return openGuide();
   if(b=g('[data-drawer]')) return openDrawer(b.dataset.drawer);
   if(b=g('[data-close]')){ if(b.dataset.close==='drawer'){ DRAWER=null; renderDrawer(); renderDock(); } else select(null); return; }
   if(b=g('[data-accept]')) return acceptOffer(+b.dataset.accept, e);
@@ -1578,6 +1654,12 @@ document.addEventListener('pointerdown', e=>{ if(e.target.id==='slop') sliderHel
 document.addEventListener('pointerup', ()=>{ if(sliderHeld){ sliderHeld=false; save(); renderInspector(); } });
 addEventListener('keydown', e=>{
   if(!started){ if(e.key==='Enter') $('#newBtn').click(); if((e.key==='c'||e.key==='C') && !$('#contBtn').hidden) $('#contBtn').click(); return; }
+  if(guideOn){
+    if(e.key==='Enter'||e.key===' '||e.key==='ArrowRight'){ e.preventDefault(); guideNext(); }
+    else if(e.key==='ArrowLeft') guideGo(guideI-1);
+    else if(e.key==='Escape') closeGuide();
+    return;
+  }
   if(coachOn) { if(e.key==='Enter'||e.key===' '){ e.preventDefault(); coachNext(); } return; }
   if(e.target.tagName==='INPUT' && e.key!=='Escape') return;
   const dOpen = $('#decision').classList.contains('open');
@@ -1587,6 +1669,7 @@ addEventListener('keydown', e=>{
   const k = e.key.toLowerCase();
   const DK = {q:'board', w:'staff', e:'hire', r:'ai', t:'log'}; if(DK[k]) openDrawer(DK[k]);
   if(k==='d' && SEL && SEL.kind==='ct') deliver(SEL.id);
+  if(k==='h') return openGuide();
   if(e.key==='Escape'){ if(SEL) select(null); else if(DRAWER){ DRAWER=null; renderDrawer(); renderDock(); } }
 });
 
@@ -1618,6 +1701,123 @@ function coachPlace(){
 }
 function coachNext(){ coachI++; if(coachI>=COACH.length){ $('#coachHole').remove(); $('#coachTip').remove(); coachOn=false; S.coachDone=true; save(); return; } coachPlace(); }
 
+/* ================= 게임 설명 ================= */
+const GUIDE_KEY = 'slopmaker-guide-seen';
+let guideOn = false, guideI = 0;
+const guideSeen = () => { try{ return !!localStorage.getItem(GUIDE_KEY); }catch(e){ return false; } };
+const kc = k => `<span class="kc">${k}</span>`;
+const GUIDE = [
+  {ic:'crown', title:'목표', body:()=>`
+    <p class="lead">동네 외주팀으로 시작해 <em>대형 SI</em>까지 회사를 키우세요</p>
+    <div class="ladder">${GRADES.map((g,i)=>`<div class="lv" style="--h:${34+i*16}%;animation-delay:${i*70}ms" data-tip="${g.name}|직원 최대 ${[3,5,8,12,18][i]}명  AI 최대 ${[2,3,4,5,5][i]}개">
+      <b>${g.name}</b><span class="fact">${ic('star','f')}${g.rep}</span></div>`).join('')}</div>
+    <div class="gfacts">
+      <div class="gfact" data-tip="평판|납품을 잘하면 오르고 일정 이상이면 등급이 올라감">${ic('star','f')}<div><b>평판으로 승급</b><br><span>등급이 오르면 큰 일감과 넓은 사무실</span></div></div>
+      <div class="gfact">${ic('cal')}<div><b>3년</b><br><span>144주 뒤 엔딩</span></div></div>
+      <div class="gfact">${ic('warn')}<div><b>부도</b><br><span>자금 ${won(-1500)} 아래</span></div></div>
+    </div>`},
+  {ic:'clock', title:'일의 흐름', body:()=>`
+    <p class="lead">일감을 받아 만들고 납품하면 돈과 평판이 들어와요</p>
+    <div class="flow">${[
+      ['board','수주', 'Q', '게시판에서 일감 선택. 계약금 30% 선입금'],
+      ['users','배치', '',  '계약에 직원을 붙이기'],
+      ['code', '개발', '',  '시간이 흐르면 진행도가 참'],
+      ['send', '납품', 'D', '진행도가 다 차면 납품'],
+      ['coin', '정산', '',  '요구 품질을 넘기면 잔금'],
+    ].map(([i,n,k,p],j)=>`<div class="fs" style="animation-delay:${j*60}ms"><span class="bub">${ic(i)}</span><span class="no">${j+1}</span><b>${n}${k?kc(k):''}</b><p>${p}</p></div>`).join('')}</div>
+    <div class="gnote">${ic('target')}품질이 모자라면 수정 요청이나 클레임, 납기를 넘기면 지체상금</div>
+    <div class="gnote">${ic('coin')}매주 월급, 월세, AI 구독료가 빠져나감</div>
+    <div class="gnote">${ic('warn')}가끔 고객, 직원, AI가 결정을 요구함. ${kc('1')}${kc('2')}${kc('3')}으로 고르기</div>`},
+  {ic:'drop', title:'슬롭 비율', body:()=>`
+    <p class="lead">계약마다 <em>AI에게 얼마나 맡길지</em> 정해요</p>
+    <div><div class="gbar"></div><div class="gbar-ends"><span>${ic('hammer')}수제</span><span>프롬프트 한 줄${ic('bot')}</span></div></div>
+    <div class="vs">
+      <div style="--c:var(--sky)"><h3>${ic('hammer')}낮게</h3><ul>
+        <li class="good">${ic('check')}품질이 좋고 버그가 적음</li>
+        <li class="good">${ic('check')}슬롭 낙인이 줄어듦</li>
+        <li class="bad">${ic('clock')}대신 느림</li></ul></div>
+      <div style="--c:var(--slime)"><h3>${ic('bot')}높게</h3><ul>
+        <li class="good">${ic('bolt')}빠르게 끝남</li>
+        <li class="bad">${ic('bug')}환각과 버그가 쌓임</li>
+        <li class="bad">${ic('drop')}슬롭 낙인이 쌓임</li>
+        <li class="bad">${ic('heart')}직원 사기가 떨어짐</li></ul></div>
+    </div>
+    <div class="gnote">${ic('bot')}AI를 구독하지 않으면 슬롭 비율은 효과가 없음</div>`},
+  {ic:'star', title:'자원과 고객', body:()=>`
+    <div class="glist">
+      <span class="gi" style="color:oklch(70% 0.15 80)">${ic('coin')}</span><div><b>자금</b><span>바닥나면 부도</span></div>
+      <span class="gi" style="color:var(--coral)">${ic('star','f')}</span><div><b>평판</b><span>등급 승급의 기준</span></div>
+      <span class="gi" style="color:oklch(68% 0.17 135)">${ic('drop')}</span><div><b>슬롭 낙인</b><span>높으면 평판이 덜 오르고 고발 영상이 뜸</span></div>
+      <span class="gi">${ic('trend')}</span><div><b>외주 단가</b><span>AI 시대라 계속 떨어짐</span></div>
+    </div>
+    <div class="gsect">${ic('board')}고객 성향</div>
+    <div class="gtags">${['picky','noai','rush','easy','gap'].map(id=>`<span class="gtag">${traitChip(id)}${TR(id).name}</span>`).join('')}</div>
+    <div class="gnote">${ic('mag')}아이콘에 마우스를 올리면 자세한 설명이 나와요</div>`},
+  {ic:'users', title:'직원과 AI', body:()=>`
+    <div class="gtwo">
+      <div><h3>${ic('hire')}직원 ${kc('E')}</h3>
+        <div class="gtags">${Object.values(ROLES).map(r=>`<span class="gtag">${ic(r.ic)}${r.name}</span>`).join('')}</div>
+        <div class="gtags">${['craft','adopter'].map(id=>`<span class="gtag">${htraitChip(id)}${HTRAITS[id].name}</span>`).join('')}</div>
+        <p>${ic('heart')}<span>사기가 높을수록 일을 잘함. 슬롭이 높은 일을 오래 하면 떨어지고, 바닥나면 퇴사</span></p>
+        <p>${ic('coin')}<span>채용과 해고 모두 주급 2주치가 듦</span></p></div>
+      <div><h3>${ic('bot')}AI 구독 ${kc('R')}</h3>
+        <p>${ic('bolt')}<span>주간 구독료를 내면 계약마다 작업량을 보태줌</span></p>
+        <p>${ic('sparkle')}<span>환각률만큼 버그를 만듦</span></p>
+        <p>${ic('bug')}<span>검수봇은 일 대신 버그를 잡음</span></p>
+        <p>${ic('warn')}<span>구독료 인상, 서비스 종료가 갑자기 찾아옴</span></p></div>
+    </div>`},
+  {ic:'pad', title:'조작', body:()=>`
+    <div class="keys">
+      <div>${kc('Space')}<b>일시정지</b></div>
+      <div>${kc('1')}${kc('2')}${kc('3')}<b>속도</b></div>
+      <div>${kc('Q')}<b>수주 게시판</b></div>
+      <div>${kc('W')}<b>직원</b></div>
+      <div>${kc('E')}<b>채용</b></div>
+      <div>${kc('R')}<b>AI 구독</b></div>
+      <div>${kc('T')}<b>회사 기록</b></div>
+      <div>${kc('D')}<b>선택한 계약 납품</b></div>
+      <div>${kc('Esc')}<b>패널 닫기</b></div>
+      <div>${kc('H')}<b>이 설명 다시 보기</b></div>
+    </div>
+    <div class="gnote">${ic('desk')}사무실의 직원이나 서버랙을 클릭하면 상세 정보. 드래그로 화면 이동, 휠로 확대</div>
+    <div class="gnote">${ic('flag')}엔딩은 평판, 슬롭 낙인, 자금에 따라 갈림</div>`},
+];
+function openGuide(){
+  if(guideOn || coachOn || $('#guide')) return;
+  guideOn = true; guideI = 0; hideTip();
+  const el = document.createElement('div'); el.className='guide'; el.id='guide';
+  el.setAttribute('role','dialog'); el.setAttribute('aria-modal','true'); el.setAttribute('aria-label','게임 설명');
+  el.innerHTML = `<div class="card"><div class="ribbon" id="gRib"></div><div class="gbody" id="gBody"></div>
+    <div class="foot"><span class="gsteps grow" id="gSteps">${GUIDE.map((p,i)=>`<button data-gstep="${i}" aria-label="${p.title}" data-tip="${p.title}"></button>`).join('')}</span>
+      <button class="btn ghost" id="gPrev">이전</button><button class="btn hot" id="gNext"></button></div></div>`;
+  document.body.append(el);
+  el.addEventListener('click', e=>{
+    const s = e.target.closest('[data-gstep]'); if(s) return guideGo(+s.dataset.gstep);
+    if(e.target.closest('#gPrev')) return guideGo(guideI-1);
+    if(e.target.closest('#gNext')) return guideNext();
+    if(e.target.closest('[data-gclose]')) return closeGuide();
+  });
+  guideGo(0);
+}
+function guideGo(i){
+  if(i<0 || i>=GUIDE.length) return;
+  const back = i<guideI; guideI = i;
+  const p = GUIDE[i], last = i===GUIDE.length-1;
+  $('#gRib').innerHTML = `${ic(p.ic)}<h2>${p.title}</h2><span class="sub">${i+1} / ${GUIDE.length}</span><button class="x" data-gclose data-tip="닫기|Esc">${ic('x')}</button>`;
+  $('#gBody').innerHTML = `<div class="gpage ${back?'back':''}">${p.body()}</div>`;
+  $('#gBody').scrollTop = 0;
+  document.querySelectorAll('#gSteps button').forEach((b,j)=>b.classList.toggle('on', j===i));
+  $('#gPrev').hidden = i===0;
+  $('#gNext').innerHTML = `${last?'시작하기':'다음'} <span class="key">Enter</span>`;
+}
+function guideNext(){ if(guideI>=GUIDE.length-1) closeGuide(); else guideGo(guideI+1); }
+function closeGuide(){
+  const el = $('#guide'); if(!el) return;
+  try{ localStorage.setItem(GUIDE_KEY, '1'); }catch(e){}
+  hideTip(); el.classList.add('out');
+  setTimeout(()=>{ el.remove(); guideOn=false; if(started && S && !S.coachDone && !coachOn) setTimeout(coach, 250); }, 220);
+}
+
 /* ================= 화면 전환 ================= */
 function wipe(mid){
   const w = $('#wipe'); w.classList.add('close');
@@ -1630,7 +1830,8 @@ function startGame(fresh){
   OFF.layout(false);
   S.staff.forEach(h=>OFF.spawn(h));
   setSpeed(1); weekAcc = 0; renderUI();
-  if(!S.coachDone) setTimeout(coach, 900);
+  if(fresh && !guideSeen()) setTimeout(openGuide, 500);
+  else if(!S.coachDone) setTimeout(coach, 900);
 }
 
 /* ================= 저장 ================= */
