@@ -1,0 +1,1138 @@
+{
+ "staff01": {
+  "stand": {
+   "head_center": [
+    128.0,
+    92.0
+   ],
+   "head_width": 79,
+   "head_top_y": 52,
+   "head_bottom_y": 132,
+   "face_center": [
+    128.0,
+    120.0
+   ],
+   "face_width": 61
+  },
+  "sit_type_a": {
+   "head_center": [
+    128.0,
+    95.0
+   ],
+   "head_width": 79,
+   "head_top_y": 55,
+   "head_bottom_y": 135,
+   "face_center": [
+    128.0,
+    123.0
+   ],
+   "face_width": 61
+  },
+  "sit_type_b": {
+   "head_center": [
+    127.5,
+    95.0
+   ],
+   "head_width": 78,
+   "head_top_y": 55,
+   "head_bottom_y": 135,
+   "face_center": [
+    128.0,
+    123.0
+   ],
+   "face_width": 61
+  },
+  "walk_1": {
+   "head_center": [
+    127.5,
+    93.5
+   ],
+   "head_width": 78,
+   "head_top_y": 53,
+   "head_bottom_y": 134,
+   "face_center": [
+    128.0,
+    121.5
+   ],
+   "face_width": 61
+  },
+  "walk_2": {
+   "head_center": [
+    127.5,
+    92.0
+   ],
+   "head_width": 78,
+   "head_top_y": 52,
+   "head_bottom_y": 132,
+   "face_center": [
+    128.0,
+    120.0
+   ],
+   "face_width": 61
+  },
+  "drink": {
+   "head_center": [
+    127.5,
+    92.0
+   ],
+   "head_width": 78,
+   "head_top_y": 52,
+   "head_bottom_y": 132,
+   "face_center": [
+    128.0,
+    120.0
+   ],
+   "face_width": 61
+  },
+  "hold_cup": {
+   "head_center": [
+    127.5,
+    92.0
+   ],
+   "head_width": 78,
+   "head_top_y": 52,
+   "head_bottom_y": 132,
+   "face_center": [
+    128.0,
+    120.0
+   ],
+   "face_width": 61
+  },
+  "talk": {
+   "head_center": [
+    127.5,
+    92.0
+   ],
+   "head_width": 78,
+   "head_top_y": 52,
+   "head_bottom_y": 132,
+   "face_center": [
+    128.0,
+    120.0
+   ],
+   "face_width": 61
+  },
+  "think": {
+   "head_center": [
+    127.5,
+    92.0
+   ],
+   "head_width": 78,
+   "head_top_y": 52,
+   "head_bottom_y": 132,
+   "face_center": [
+    128.0,
+    120.0
+   ],
+   "face_width": 61
+  },
+  "stretch": {
+   "head_center": [
+    136.0,
+    91.0
+   ],
+   "head_width": 75,
+   "head_top_y": 49,
+   "head_bottom_y": 133,
+   "face_center": [
+    126.0,
+    116.0
+   ],
+   "face_width": 55
+  }
+ },
+ "staff02": {
+  "stand": {
+   "head_center": [
+    129.0,
+    92.0
+   ],
+   "head_width": 87,
+   "head_top_y": 52,
+   "head_bottom_y": 132,
+   "face_center": [
+    120.5,
+    118.5
+   ],
+   "face_width": 48
+  },
+  "sit_type_a": {
+   "head_center": [
+    129.0,
+    95.5
+   ],
+   "head_width": 87,
+   "head_top_y": 55,
+   "head_bottom_y": 136,
+   "face_center": [
+    120.5,
+    122.0
+   ],
+   "face_width": 48
+  },
+  "sit_type_b": {
+   "head_center": [
+    129.0,
+    95.5
+   ],
+   "head_width": 87,
+   "head_top_y": 55,
+   "head_bottom_y": 136,
+   "face_center": [
+    120.5,
+    122.0
+   ],
+   "face_width": 48
+  },
+  "walk_1": {
+   "head_center": [
+    129.0,
+    93.5
+   ],
+   "head_width": 87,
+   "head_top_y": 53,
+   "head_bottom_y": 134,
+   "face_center": [
+    120.5,
+    120.5
+   ],
+   "face_width": 48
+  },
+  "walk_2": {
+   "head_center": [
+    129.0,
+    92.0
+   ],
+   "head_width": 87,
+   "head_top_y": 52,
+   "head_bottom_y": 132,
+   "face_center": [
+    120.5,
+    118.5
+   ],
+   "face_width": 48
+  },
+  "drink": {
+   "head_center": [
+    128.5,
+    92.0
+   ],
+   "head_width": 88,
+   "head_top_y": 52,
+   "head_bottom_y": 132,
+   "face_center": [
+    120.5,
+    118.5
+   ],
+   "face_width": 48
+  },
+  "hold_cup": {
+   "head_center": [
+    129.0,
+    92.0
+   ],
+   "head_width": 87,
+   "head_top_y": 52,
+   "head_bottom_y": 132,
+   "face_center": [
+    120.5,
+    118.0
+   ],
+   "face_width": 48
+  },
+  "talk": {
+   "head_center": [
+    129.0,
+    92.0
+   ],
+   "head_width": 87,
+   "head_top_y": 52,
+   "head_bottom_y": 132,
+   "face_center": [
+    120.0,
+    118.5
+   ],
+   "face_width": 49
+  },
+  "think": {
+   "head_center": [
+    129.0,
+    92.0
+   ],
+   "head_width": 87,
+   "head_top_y": 52,
+   "head_bottom_y": 132,
+   "face_center": [
+    120.5,
+    118.5
+   ],
+   "face_width": 48
+  },
+  "stretch": {
+   "head_center": [
+    130.5,
+    86.5
+   ],
+   "head_width": 84,
+   "head_top_y": 46,
+   "head_bottom_y": 127,
+   "face_center": [
+    123.0,
+    110.5
+   ],
+   "face_width": 51
+  }
+ },
+ "staff03": {
+  "stand": {
+   "head_center": [
+    128.5,
+    91.5
+   ],
+   "head_width": 84,
+   "head_top_y": 51,
+   "head_bottom_y": 132,
+   "face_center": [
+    129.5,
+    121.0
+   ],
+   "face_width": 60
+  },
+  "sit_type_a": {
+   "head_center": [
+    128.5,
+    94.5
+   ],
+   "head_width": 84,
+   "head_top_y": 53,
+   "head_bottom_y": 136,
+   "face_center": [
+    128.5,
+    125.0
+   ],
+   "face_width": 60
+  },
+  "sit_type_b": {
+   "head_center": [
+    129.0,
+    94.5
+   ],
+   "head_width": 83,
+   "head_top_y": 53,
+   "head_bottom_y": 136,
+   "face_center": [
+    129.0,
+    124.5
+   ],
+   "face_width": 61
+  },
+  "walk_1": {
+   "head_center": [
+    128.5,
+    92.5
+   ],
+   "head_width": 84,
+   "head_top_y": 51,
+   "head_bottom_y": 134,
+   "face_center": [
+    128.5,
+    122.5
+   ],
+   "face_width": 60
+  },
+  "walk_2": {
+   "head_center": [
+    128.0,
+    91.0
+   ],
+   "head_width": 83,
+   "head_top_y": 50,
+   "head_bottom_y": 132,
+   "face_center": [
+    128.5,
+    120.5
+   ],
+   "face_width": 60
+  },
+  "drink": {
+   "head_center": [
+    127.5,
+    91.5
+   ],
+   "head_width": 84,
+   "head_top_y": 51,
+   "head_bottom_y": 132,
+   "face_center": [
+    129.0,
+    121.0
+   ],
+   "face_width": 61
+  },
+  "hold_cup": {
+   "head_center": [
+    128.5,
+    91.5
+   ],
+   "head_width": 84,
+   "head_top_y": 51,
+   "head_bottom_y": 132,
+   "face_center": [
+    129.5,
+    121.0
+   ],
+   "face_width": 60
+  },
+  "talk": {
+   "head_center": [
+    128.5,
+    91.5
+   ],
+   "head_width": 84,
+   "head_top_y": 51,
+   "head_bottom_y": 132,
+   "face_center": [
+    129.5,
+    121.0
+   ],
+   "face_width": 60
+  },
+  "think": {
+   "head_center": [
+    128.5,
+    91.0
+   ],
+   "head_width": 84,
+   "head_top_y": 50,
+   "head_bottom_y": 132,
+   "face_center": [
+    128.5,
+    121.0
+   ],
+   "face_width": 60
+  },
+  "stretch": {
+   "head_center": [
+    135.5,
+    87.0
+   ],
+   "head_width": 76,
+   "head_top_y": 41,
+   "head_bottom_y": 133,
+   "face_center": [
+    124.5,
+    116.5
+   ],
+   "face_width": 54
+  }
+ },
+ "staff04": {
+  "stand": {
+   "head_center": [
+    129.5,
+    92.0
+   ],
+   "head_width": 82,
+   "head_top_y": 52,
+   "head_bottom_y": 132,
+   "face_center": [
+    127.0,
+    118.0
+   ],
+   "face_width": 61
+  },
+  "sit_type_a": {
+   "head_center": [
+    128.5,
+    95.5
+   ],
+   "head_width": 82,
+   "head_top_y": 55,
+   "head_bottom_y": 136,
+   "face_center": [
+    119.0,
+    122.0
+   ],
+   "face_width": 43
+  },
+  "sit_type_b": {
+   "head_center": [
+    129.5,
+    100.5
+   ],
+   "head_width": 82,
+   "head_top_y": 55,
+   "head_bottom_y": 146,
+   "face_center": [
+    118.5,
+    129.5
+   ],
+   "face_width": 44
+  },
+  "walk_1": {
+   "head_center": [
+    132.0,
+    93.5
+   ],
+   "head_width": 89,
+   "head_top_y": 53,
+   "head_bottom_y": 134,
+   "face_center": [
+    118.0,
+    119.5
+   ],
+   "face_width": 45
+  },
+  "walk_2": {
+   "head_center": [
+    129.0,
+    92.0
+   ],
+   "head_width": 83,
+   "head_top_y": 52,
+   "head_bottom_y": 132,
+   "face_center": [
+    118.5,
+    118.0
+   ],
+   "face_width": 44
+  },
+  "drink": {
+   "head_center": [
+    128.5,
+    92.0
+   ],
+   "head_width": 82,
+   "head_top_y": 52,
+   "head_bottom_y": 132,
+   "face_center": [
+    126.0,
+    118.0
+   ],
+   "face_width": 61
+  },
+  "hold_cup": {
+   "head_center": [
+    129.0,
+    92.0
+   ],
+   "head_width": 83,
+   "head_top_y": 52,
+   "head_bottom_y": 132,
+   "face_center": [
+    127.0,
+    118.0
+   ],
+   "face_width": 61
+  },
+  "talk": {
+   "head_center": [
+    128.5,
+    92.0
+   ],
+   "head_width": 82,
+   "head_top_y": 52,
+   "head_bottom_y": 132,
+   "face_center": [
+    126.0,
+    118.0
+   ],
+   "face_width": 61
+  },
+  "think": {
+   "head_center": [
+    129.5,
+    99.0
+   ],
+   "head_width": 82,
+   "head_top_y": 52,
+   "head_bottom_y": 146,
+   "face_center": [
+    118.5,
+    128.0
+   ],
+   "face_width": 44
+  },
+  "stretch": {
+   "head_center": [
+    135.0,
+    90.5
+   ],
+   "head_width": 75,
+   "head_top_y": 47,
+   "head_bottom_y": 134,
+   "face_center": [
+    125.5,
+    114.0
+   ],
+   "face_width": 56
+  }
+ },
+ "staff05": {
+  "stand": {
+   "head_center": [
+    125.0,
+    95.5
+   ],
+   "head_width": 65,
+   "head_top_y": 59,
+   "head_bottom_y": 132,
+   "face_center": [
+    123.0,
+    112.0
+   ],
+   "face_width": 61
+  },
+  "sit_type_a": {
+   "head_center": [
+    124.5,
+    98.5
+   ],
+   "head_width": 62,
+   "head_top_y": 62,
+   "head_bottom_y": 135,
+   "face_center": [
+    123.5,
+    115.0
+   ],
+   "face_width": 60
+  },
+  "sit_type_b": {
+   "head_center": [
+    124.5,
+    99.0
+   ],
+   "head_width": 62,
+   "head_top_y": 62,
+   "head_bottom_y": 136,
+   "face_center": [
+    122.5,
+    116.0
+   ],
+   "face_width": 58
+  },
+  "walk_1": {
+   "head_center": [
+    123.5,
+    97.0
+   ],
+   "head_width": 62,
+   "head_top_y": 60,
+   "head_bottom_y": 134,
+   "face_center": [
+    121.5,
+    114.0
+   ],
+   "face_width": 58
+  },
+  "walk_2": {
+   "head_center": [
+    124.0,
+    95.0
+   ],
+   "head_width": 61,
+   "head_top_y": 58,
+   "head_bottom_y": 132,
+   "face_center": [
+    123.0,
+    112.0
+   ],
+   "face_width": 59
+  },
+  "drink": {
+   "head_center": [
+    124.5,
+    95.5
+   ],
+   "head_width": 62,
+   "head_top_y": 59,
+   "head_bottom_y": 132,
+   "face_center": [
+    124.0,
+    112.0
+   ],
+   "face_width": 61
+  },
+  "hold_cup": {
+   "head_center": [
+    125.5,
+    95.5
+   ],
+   "head_width": 62,
+   "head_top_y": 59,
+   "head_bottom_y": 132,
+   "face_center": [
+    122.5,
+    112.0
+   ],
+   "face_width": 56
+  },
+  "talk": {
+   "head_center": [
+    124.0,
+    95.5
+   ],
+   "head_width": 61,
+   "head_top_y": 59,
+   "head_bottom_y": 132,
+   "face_center": [
+    121.0,
+    112.0
+   ],
+   "face_width": 55
+  },
+  "think": {
+   "head_center": [
+    124.0,
+    95.5
+   ],
+   "head_width": 61,
+   "head_top_y": 59,
+   "head_bottom_y": 132,
+   "face_center": [
+    122.5,
+    112.0
+   ],
+   "face_width": 58
+  },
+  "stretch": {
+   "head_center": [
+    129.5,
+    88.0
+   ],
+   "head_width": 64,
+   "head_top_y": 49,
+   "head_bottom_y": 127,
+   "face_center": [
+    126.0,
+    106.0
+   ],
+   "face_width": 57
+  }
+ },
+ "staff06": {
+  "stand": {
+   "head_center": [
+    113.0,
+    92.0
+   ],
+   "head_width": 79,
+   "head_top_y": 52,
+   "head_bottom_y": 132,
+   "face_center": [
+    113.5,
+    118.0
+   ],
+   "face_width": 60
+  },
+  "sit_type_a": {
+   "head_center": [
+    112.0,
+    96.0
+   ],
+   "head_width": 81,
+   "head_top_y": 56,
+   "head_bottom_y": 136,
+   "face_center": [
+    105.5,
+    122.5
+   ],
+   "face_width": 44
+  },
+  "sit_type_b": {
+   "head_center": [
+    112.5,
+    96.0
+   ],
+   "head_width": 80,
+   "head_top_y": 56,
+   "head_bottom_y": 136,
+   "face_center": [
+    113.5,
+    122.0
+   ],
+   "face_width": 60
+  },
+  "walk_1": {
+   "head_center": [
+    112.0,
+    94.0
+   ],
+   "head_width": 79,
+   "head_top_y": 54,
+   "head_bottom_y": 134,
+   "face_center": [
+    113.0,
+    120.0
+   ],
+   "face_width": 61
+  },
+  "walk_2": {
+   "head_center": [
+    112.5,
+    92.0
+   ],
+   "head_width": 80,
+   "head_top_y": 52,
+   "head_bottom_y": 132,
+   "face_center": [
+    105.0,
+    118.0
+   ],
+   "face_width": 45
+  },
+  "drink": {
+   "head_center": [
+    113.0,
+    92.0
+   ],
+   "head_width": 77,
+   "head_top_y": 52,
+   "head_bottom_y": 132,
+   "face_center": [
+    112.5,
+    119.0
+   ],
+   "face_width": 60
+  },
+  "hold_cup": {
+   "head_center": [
+    112.5,
+    92.0
+   ],
+   "head_width": 78,
+   "head_top_y": 52,
+   "head_bottom_y": 132,
+   "face_center": [
+    112.5,
+    119.0
+   ],
+   "face_width": 60
+  },
+  "talk": {
+   "head_center": [
+    113.0,
+    92.0
+   ],
+   "head_width": 77,
+   "head_top_y": 52,
+   "head_bottom_y": 132,
+   "face_center": [
+    112.5,
+    119.0
+   ],
+   "face_width": 60
+  },
+  "think": {
+   "head_center": [
+    112.5,
+    92.5
+   ],
+   "head_width": 78,
+   "head_top_y": 53,
+   "head_bottom_y": 132,
+   "face_center": [
+    104.5,
+    118.0
+   ],
+   "face_width": 44
+  },
+  "stretch": {
+   "head_center": [
+    125.0,
+    90.0
+   ],
+   "head_width": 75,
+   "head_top_y": 47,
+   "head_bottom_y": 133,
+   "face_center": [
+    113.5,
+    114.5
+   ],
+   "face_width": 52
+  }
+ },
+ "staff07": {
+  "stand": {
+   "head_center": [
+    126.5,
+    91.0
+   ],
+   "head_width": 78,
+   "head_top_y": 52,
+   "head_bottom_y": 130,
+   "face_center": [
+    118.0,
+    116.0
+   ],
+   "face_width": 47
+  },
+  "sit_type_a": {
+   "head_center": [
+    128.0,
+    92.0
+   ],
+   "head_width": 75,
+   "head_top_y": 55,
+   "head_bottom_y": 129,
+   "face_center": [
+    118.0,
+    116.5
+   ],
+   "face_width": 47
+  },
+  "sit_type_b": {
+   "head_center": [
+    128.5,
+    92.0
+   ],
+   "head_width": 74,
+   "head_top_y": 56,
+   "head_bottom_y": 128,
+   "face_center": [
+    118.5,
+    115.0
+   ],
+   "face_width": 46
+  },
+  "walk_1": {
+   "head_center": [
+    130.0,
+    90.0
+   ],
+   "head_width": 71,
+   "head_top_y": 54,
+   "head_bottom_y": 126,
+   "face_center": [
+    118.0,
+    113.5
+   ],
+   "face_width": 47
+  },
+  "walk_2": {
+   "head_center": [
+    128.0,
+    88.5
+   ],
+   "head_width": 75,
+   "head_top_y": 52,
+   "head_bottom_y": 125,
+   "face_center": [
+    118.5,
+    112.5
+   ],
+   "face_width": 46
+  },
+  "drink": {
+   "head_center": [
+    126.5,
+    90.0
+   ],
+   "head_width": 78,
+   "head_top_y": 52,
+   "head_bottom_y": 128,
+   "face_center": [
+    118.0,
+    115.0
+   ],
+   "face_width": 47
+  },
+  "hold_cup": {
+   "head_center": [
+    126.5,
+    91.0
+   ],
+   "head_width": 78,
+   "head_top_y": 52,
+   "head_bottom_y": 130,
+   "face_center": [
+    118.5,
+    116.0
+   ],
+   "face_width": 46
+  },
+  "talk": {
+   "head_center": [
+    126.5,
+    89.5
+   ],
+   "head_width": 78,
+   "head_top_y": 52,
+   "head_bottom_y": 127,
+   "face_center": [
+    118.0,
+    114.0
+   ],
+   "face_width": 47
+  },
+  "think": {
+   "head_center": [
+    128.5,
+    88.0
+   ],
+   "head_width": 74,
+   "head_top_y": 52,
+   "head_bottom_y": 124,
+   "face_center": [
+    118.5,
+    111.5
+   ],
+   "face_width": 48
+  },
+  "stretch": {
+   "head_center": [
+    133.5,
+    80.5
+   ],
+   "head_width": 72,
+   "head_top_y": 47,
+   "head_bottom_y": 114,
+   "face_center": [
+    124.0,
+    100.0
+   ],
+   "face_width": 51
+  }
+ },
+ "staff08": {
+  "stand": {
+   "head_center": [
+    127.0,
+    92.0
+   ],
+   "head_width": 79,
+   "head_top_y": 52,
+   "head_bottom_y": 132,
+   "face_center": [
+    127.5,
+    120.0
+   ],
+   "face_width": 60
+  },
+  "sit_type_a": {
+   "head_center": [
+    126.5,
+    95.5
+   ],
+   "head_width": 80,
+   "head_top_y": 55,
+   "head_bottom_y": 136,
+   "face_center": [
+    128.0,
+    124.0
+   ],
+   "face_width": 61
+  },
+  "sit_type_b": {
+   "head_center": [
+    127.5,
+    96.0
+   ],
+   "head_width": 78,
+   "head_top_y": 56,
+   "head_bottom_y": 136,
+   "face_center": [
+    128.0,
+    124.0
+   ],
+   "face_width": 61
+  },
+  "walk_1": {
+   "head_center": [
+    127.5,
+    94.0
+   ],
+   "head_width": 78,
+   "head_top_y": 54,
+   "head_bottom_y": 134,
+   "face_center": [
+    128.0,
+    122.0
+   ],
+   "face_width": 61
+  },
+  "walk_2": {
+   "head_center": [
+    126.5,
+    92.0
+   ],
+   "head_width": 80,
+   "head_top_y": 52,
+   "head_bottom_y": 132,
+   "face_center": [
+    127.5,
+    120.0
+   ],
+   "face_width": 60
+  },
+  "drink": {
+   "head_center": [
+    127.0,
+    92.0
+   ],
+   "head_width": 79,
+   "head_top_y": 52,
+   "head_bottom_y": 132,
+   "face_center": [
+    127.5,
+    119.5
+   ],
+   "face_width": 60
+  },
+  "hold_cup": {
+   "head_center": [
+    127.0,
+    92.0
+   ],
+   "head_width": 79,
+   "head_top_y": 52,
+   "head_bottom_y": 132,
+   "face_center": [
+    127.5,
+    120.0
+   ],
+   "face_width": 60
+  },
+  "talk": {
+   "head_center": [
+    126.5,
+    92.0
+   ],
+   "head_width": 80,
+   "head_top_y": 52,
+   "head_bottom_y": 132,
+   "face_center": [
+    127.5,
+    119.5
+   ],
+   "face_width": 60
+  },
+  "think": {
+   "head_center": [
+    127.0,
+    92.0
+   ],
+   "head_width": 79,
+   "head_top_y": 52,
+   "head_bottom_y": 132,
+   "face_center": [
+    128.0,
+    120.0
+   ],
+   "face_width": 61
+  },
+  "stretch": {
+   "head_center": [
+    135.0,
+    91.0
+   ],
+   "head_width": 75,
+   "head_top_y": 48,
+   "head_bottom_y": 134,
+   "face_center": [
+    125.0,
+    117.0
+   ],
+   "face_width": 55
+  }
+ }
+}

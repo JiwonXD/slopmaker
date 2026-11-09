@@ -1,0 +1,1558 @@
+{
+  "projection": "true isometric 30 deg",
+  "canvas": [
+    256,
+    256
+  ],
+  "anchor": [
+    128,
+    200
+  ],
+  "anchor_rule": "footprint centre (centre of the floor rectangle) of the object",
+  "cell": {
+    "diamond_width": 64,
+    "diamond_height": 36.95,
+    "edge": 36.95,
+    "height_cell_px": 36.95
+  },
+  "axes": {
+    "x": "screen bottom-right (+30 deg)",
+    "y": "screen bottom-left (-150 deg)",
+    "z": "up"
+  },
+  "screen_from_grid": "sx = ox + (x - y) * 32, sy = oy + (x + y) * 18.475 - z * 36.95",
+  "front": "+y (faces bottom-left); mirror horizontally to face bottom-right and swap the x/y footprint",
+  "draw_order": "sort by (x + y) of the footprint centre, back to front",
+  "character_scale": 0.39,
+  "character_note": "staff sprites (game/staff, anchor 128,250 = feet) drawn at 0.39 -> a standing worker is ~2.1 height cells",
+  "props": {
+    "desk": {
+      "file": "desk.webp",
+      "anchor": [
+        128,
+        200
+      ],
+      "footprint_xyz_cells": [
+        2,
+        1,
+        1
+      ],
+      "source": "iso/_cand/desk_d80_s2.png",
+      "iou_hull": 0.994,
+      "iou_raw": 0.929,
+      "mirrored": false,
+      "x_scale_fix": 1.0,
+      "shear_fix": 0.012,
+      "note": "monitor back faces +y; seat the worker on the -y side (behind the desk) facing +y"
+    },
+    "meeting_table": {
+      "file": "meeting_table.webp",
+      "anchor": [
+        128,
+        200
+      ],
+      "footprint_xyz_cells": [
+        2,
+        2,
+        1
+      ],
+      "source": "iso/_cand/meeting_table_d100_s3.png",
+      "iou_hull": 0.95,
+      "iou_raw": 0.704,
+      "mirrored": false,
+      "x_scale_fix": 1.0,
+      "shear_fix": 0.012
+    },
+    "sofa": {
+      "file": "sofa.webp",
+      "anchor": [
+        128,
+        200
+      ],
+      "footprint_xyz_cells": [
+        2,
+        1,
+        1.1
+      ],
+      "source": "iso/_cand/sofa_d100_s3.png",
+      "iou_hull": 0.918,
+      "iou_raw": 0.893,
+      "mirrored": false,
+      "x_scale_fix": 1.0,
+      "shear_fix": 0.012
+    },
+    "bookshelf": {
+      "file": "bookshelf.webp",
+      "anchor": [
+        128,
+        200
+      ],
+      "footprint_xyz_cells": [
+        2,
+        0.5,
+        2.4
+      ],
+      "source": "iso/_cand/bookshelf_d90_s1.png",
+      "iou_hull": 0.907,
+      "iou_raw": 0.904,
+      "mirrored": false,
+      "x_scale_fix": 1.0,
+      "shear_fix": 0.012
+    },
+    "printer": {
+      "file": "printer.webp",
+      "anchor": [
+        128,
+        200
+      ],
+      "footprint_xyz_cells": [
+        1,
+        1,
+        1.4
+      ],
+      "source": "iso/_cand/printer_d100_s3.png",
+      "iou_hull": 0.958,
+      "iou_raw": 0.938,
+      "mirrored": false,
+      "x_scale_fix": 0.96,
+      "shear_fix": -0.011
+    },
+    "whiteboard": {
+      "file": "whiteboard.webp",
+      "anchor": [
+        128,
+        200
+      ],
+      "footprint_xyz_cells": [
+        2,
+        0.3,
+        2.4
+      ],
+      "source": "iso/_cand/whiteboard_d100_s2.png",
+      "iou_hull": 0.87,
+      "iou_raw": 0.661,
+      "mirrored": false,
+      "x_scale_fix": 0.922,
+      "shear_fix": 0.034
+    },
+    "watercooler": {
+      "file": "watercooler.webp",
+      "anchor": [
+        128,
+        200
+      ],
+      "footprint_xyz_cells": [
+        0.7,
+        0.7,
+        1.9
+      ],
+      "source": "iso/_cand/watercooler_d100_s2.png",
+      "iou_hull": 0.917,
+      "iou_raw": 0.876,
+      "mirrored": false,
+      "x_scale_fix": 1.0,
+      "shear_fix": 0.0
+    },
+    "coffee_counter": {
+      "file": "coffee_counter.webp",
+      "anchor": [
+        128,
+        200
+      ],
+      "footprint_xyz_cells": [
+        1,
+        1,
+        1
+      ],
+      "source": "iso/_cand/coffee_counter_d100_s1.png",
+      "iou_hull": 0.97,
+      "iou_raw": 0.954,
+      "mirrored": false,
+      "x_scale_fix": 0.98,
+      "shear_fix": 0.0
+    },
+    "restroom_door": {
+      "file": "restroom_door.webp",
+      "anchor": [
+        128,
+        200
+      ],
+      "footprint_xyz_cells": [
+        0.15,
+        1.2,
+        2.6
+      ],
+      "source": "iso/_cand/restroom_door_d80_s2.png",
+      "iou_hull": 0.994,
+      "iou_raw": 0.993,
+      "mirrored": false,
+      "x_scale_fix": 1.0,
+      "shear_fix": 0.0,
+      "note": "sits in the left wall (x = 0 plane), door faces +x (bottom-right); footprint centre is on the wall line"
+    },
+    "boxes": {
+      "file": "boxes.webp",
+      "anchor": [
+        128,
+        200
+      ],
+      "footprint_xyz_cells": [
+        1,
+        1,
+        1.2
+      ],
+      "source": "iso/_cand/boxes_d80_s1.png",
+      "iou_hull": 0.99,
+      "iou_raw": 0.988,
+      "mirrored": false,
+      "x_scale_fix": 1.0,
+      "shear_fix": -0.012
+    },
+    "ai_lite": {
+      "file": "ai_lite.webp",
+      "anchor": [
+        128,
+        200
+      ],
+      "footprint_xyz_cells": [
+        0.8,
+        0.8,
+        1.9
+      ],
+      "source": "iso/_cand/ai_lite_d100_s1.png",
+      "iou_hull": 0.923,
+      "iou_raw": 0.923,
+      "mirrored": false,
+      "x_scale_fix": 0.921,
+      "shear_fix": -0.011
+    },
+    "ai_code": {
+      "file": "ai_code.webp",
+      "anchor": [
+        128,
+        200
+      ],
+      "footprint_xyz_cells": [
+        1,
+        1,
+        2.3
+      ],
+      "source": "iso/_cand/ai_code_d100_s1.png",
+      "iou_hull": 0.956,
+      "iou_raw": 0.956,
+      "mirrored": false,
+      "x_scale_fix": 0.921,
+      "shear_fix": -0.011
+    },
+    "ai_pixel": {
+      "file": "ai_pixel.webp",
+      "anchor": [
+        128,
+        200
+      ],
+      "footprint_xyz_cells": [
+        1,
+        1,
+        2.3
+      ],
+      "source": "iso/_cand/ai_pixel_d80_s2.png",
+      "iou_hull": 0.878,
+      "iou_raw": 0.875,
+      "mirrored": false,
+      "x_scale_fix": 0.921,
+      "shear_fix": -0.011
+    },
+    "ai_check": {
+      "file": "ai_check.webp",
+      "anchor": [
+        128,
+        200
+      ],
+      "footprint_xyz_cells": [
+        1,
+        1,
+        2.3
+      ],
+      "source": "iso/_cand/ai_check_d100_s3.png",
+      "iou_hull": 0.892,
+      "iou_raw": 0.837,
+      "mirrored": false,
+      "x_scale_fix": 0.921,
+      "shear_fix": -0.011
+    },
+    "ai_mega": {
+      "file": "ai_mega.webp",
+      "anchor": [
+        128,
+        200
+      ],
+      "footprint_xyz_cells": [
+        1.4,
+        1,
+        2.6
+      ],
+      "source": "iso/_cand/ai_mega_d100_s5.png",
+      "iou_hull": 0.924,
+      "iou_raw": 0.885,
+      "mirrored": false,
+      "x_scale_fix": 1.022,
+      "shear_fix": 0.047
+    }
+  },
+  "acc": {
+    "glasses_round": {
+      "file": "acc/glasses_round.webp",
+      "source": "acc/_cand/glasses_round_s1.png",
+      "ref": "staff01/stand",
+      "ref_face_center": [
+        128.0,
+        120.0
+      ],
+      "ref_face_width": 61,
+      "bbox_rel_to_face": [
+        -0.639,
+        -0.344,
+        0.311,
+        0.082
+      ],
+      "layer": "above the character",
+      "exclude_staff": [],
+      "mirror": "when the character is mirrored to face bottom-right, mirror the placed accessory with it"
+    },
+    "glasses_square": {
+      "file": "acc/glasses_square.webp",
+      "source": "acc/_cand/glasses_square_s2.png",
+      "ref": "staff01/stand",
+      "ref_face_center": [
+        128.0,
+        120.0
+      ],
+      "ref_face_width": 61,
+      "bbox_rel_to_face": [
+        -0.705,
+        -0.393,
+        0.525,
+        0.115
+      ],
+      "layer": "above the character",
+      "exclude_staff": [],
+      "mirror": "when the character is mirrored to face bottom-right, mirror the placed accessory with it"
+    },
+    "headphones": {
+      "file": "acc/headphones.webp",
+      "source": "acc/_cand/headphones_s2.png",
+      "ref": "staff01/stand",
+      "ref_face_center": [
+        128.0,
+        120.0
+      ],
+      "ref_face_width": 61,
+      "bbox_rel_to_face": [
+        -0.754,
+        -1.23,
+        0.803,
+        0.148
+      ],
+      "layer": "above the character",
+      "exclude_staff": [
+        "staff05"
+      ],
+      "mirror": "when the character is mirrored to face bottom-right, mirror the placed accessory with it"
+    },
+    "cap": {
+      "file": "acc/cap.webp",
+      "source": "acc/_cand/cap_s2.png",
+      "ref": "staff01/stand",
+      "ref_face_center": [
+        128.0,
+        120.0
+      ],
+      "ref_face_width": 61,
+      "bbox_rel_to_face": [
+        -1.0,
+        -1.262,
+        0.721,
+        -0.164
+      ],
+      "layer": "above the character",
+      "exclude_staff": [],
+      "mirror": "when the character is mirrored to face bottom-right, mirror the placed accessory with it"
+    },
+    "beanie": {
+      "file": "acc/beanie.webp",
+      "source": "acc/_cand/beanie_s2.png",
+      "ref": "staff01/stand",
+      "ref_face_center": [
+        128.0,
+        120.0
+      ],
+      "ref_face_width": 61,
+      "bbox_rel_to_face": [
+        -0.738,
+        -1.213,
+        0.721,
+        -0.033
+      ],
+      "layer": "above the character",
+      "exclude_staff": [
+        "staff02",
+        "staff06",
+        "staff07"
+      ],
+      "mirror": "when the character is mirrored to face bottom-right, mirror the placed accessory with it"
+    }
+  },
+  "acc_rule": "s = target.face_width / ref_face_width; scale the 256 accessory canvas by s and draw it at target.face_center - ref_face_center * s (canvas pixels, staff sprites at their 256 canvas)",
+  "staff_heads": {
+    "staff01": {
+      "stand": {
+        "head_center": [
+          128.0,
+          92.0
+        ],
+        "head_width": 79,
+        "head_top_y": 52,
+        "head_bottom_y": 132,
+        "face_center": [
+          128.0,
+          120.0
+        ],
+        "face_width": 61
+      },
+      "sit_type_a": {
+        "head_center": [
+          128.0,
+          95.0
+        ],
+        "head_width": 79,
+        "head_top_y": 55,
+        "head_bottom_y": 135,
+        "face_center": [
+          128.0,
+          123.0
+        ],
+        "face_width": 61
+      },
+      "sit_type_b": {
+        "head_center": [
+          127.5,
+          95.0
+        ],
+        "head_width": 78,
+        "head_top_y": 55,
+        "head_bottom_y": 135,
+        "face_center": [
+          128.0,
+          123.0
+        ],
+        "face_width": 61
+      },
+      "walk_1": {
+        "head_center": [
+          127.5,
+          93.5
+        ],
+        "head_width": 78,
+        "head_top_y": 53,
+        "head_bottom_y": 134,
+        "face_center": [
+          128.0,
+          121.5
+        ],
+        "face_width": 61
+      },
+      "walk_2": {
+        "head_center": [
+          127.5,
+          92.0
+        ],
+        "head_width": 78,
+        "head_top_y": 52,
+        "head_bottom_y": 132,
+        "face_center": [
+          128.0,
+          120.0
+        ],
+        "face_width": 61
+      },
+      "drink": {
+        "head_center": [
+          127.5,
+          92.0
+        ],
+        "head_width": 78,
+        "head_top_y": 52,
+        "head_bottom_y": 132,
+        "face_center": [
+          128.0,
+          120.0
+        ],
+        "face_width": 61
+      },
+      "hold_cup": {
+        "head_center": [
+          127.5,
+          92.0
+        ],
+        "head_width": 78,
+        "head_top_y": 52,
+        "head_bottom_y": 132,
+        "face_center": [
+          128.0,
+          120.0
+        ],
+        "face_width": 61
+      },
+      "talk": {
+        "head_center": [
+          127.5,
+          92.0
+        ],
+        "head_width": 78,
+        "head_top_y": 52,
+        "head_bottom_y": 132,
+        "face_center": [
+          128.0,
+          120.0
+        ],
+        "face_width": 61
+      },
+      "think": {
+        "head_center": [
+          127.5,
+          92.0
+        ],
+        "head_width": 78,
+        "head_top_y": 52,
+        "head_bottom_y": 132,
+        "face_center": [
+          128.0,
+          120.0
+        ],
+        "face_width": 61
+      },
+      "stretch": {
+        "head_center": [
+          136.0,
+          91.0
+        ],
+        "head_width": 75,
+        "head_top_y": 49,
+        "head_bottom_y": 133,
+        "face_center": [
+          126.0,
+          116.0
+        ],
+        "face_width": 55
+      }
+    },
+    "staff02": {
+      "stand": {
+        "head_center": [
+          129.0,
+          92.0
+        ],
+        "head_width": 87,
+        "head_top_y": 52,
+        "head_bottom_y": 132,
+        "face_center": [
+          120.5,
+          118.5
+        ],
+        "face_width": 48
+      },
+      "sit_type_a": {
+        "head_center": [
+          129.0,
+          95.5
+        ],
+        "head_width": 87,
+        "head_top_y": 55,
+        "head_bottom_y": 136,
+        "face_center": [
+          120.5,
+          122.0
+        ],
+        "face_width": 48
+      },
+      "sit_type_b": {
+        "head_center": [
+          129.0,
+          95.5
+        ],
+        "head_width": 87,
+        "head_top_y": 55,
+        "head_bottom_y": 136,
+        "face_center": [
+          120.5,
+          122.0
+        ],
+        "face_width": 48
+      },
+      "walk_1": {
+        "head_center": [
+          129.0,
+          93.5
+        ],
+        "head_width": 87,
+        "head_top_y": 53,
+        "head_bottom_y": 134,
+        "face_center": [
+          120.5,
+          120.5
+        ],
+        "face_width": 48
+      },
+      "walk_2": {
+        "head_center": [
+          129.0,
+          92.0
+        ],
+        "head_width": 87,
+        "head_top_y": 52,
+        "head_bottom_y": 132,
+        "face_center": [
+          120.5,
+          118.5
+        ],
+        "face_width": 48
+      },
+      "drink": {
+        "head_center": [
+          128.5,
+          92.0
+        ],
+        "head_width": 88,
+        "head_top_y": 52,
+        "head_bottom_y": 132,
+        "face_center": [
+          120.5,
+          118.5
+        ],
+        "face_width": 48
+      },
+      "hold_cup": {
+        "head_center": [
+          129.0,
+          92.0
+        ],
+        "head_width": 87,
+        "head_top_y": 52,
+        "head_bottom_y": 132,
+        "face_center": [
+          120.5,
+          118.0
+        ],
+        "face_width": 48
+      },
+      "talk": {
+        "head_center": [
+          129.0,
+          92.0
+        ],
+        "head_width": 87,
+        "head_top_y": 52,
+        "head_bottom_y": 132,
+        "face_center": [
+          120.0,
+          118.5
+        ],
+        "face_width": 49
+      },
+      "think": {
+        "head_center": [
+          129.0,
+          92.0
+        ],
+        "head_width": 87,
+        "head_top_y": 52,
+        "head_bottom_y": 132,
+        "face_center": [
+          120.5,
+          118.5
+        ],
+        "face_width": 48
+      },
+      "stretch": {
+        "head_center": [
+          130.5,
+          86.5
+        ],
+        "head_width": 84,
+        "head_top_y": 46,
+        "head_bottom_y": 127,
+        "face_center": [
+          123.0,
+          110.5
+        ],
+        "face_width": 51
+      }
+    },
+    "staff03": {
+      "stand": {
+        "head_center": [
+          128.5,
+          91.5
+        ],
+        "head_width": 84,
+        "head_top_y": 51,
+        "head_bottom_y": 132,
+        "face_center": [
+          129.5,
+          121.0
+        ],
+        "face_width": 60
+      },
+      "sit_type_a": {
+        "head_center": [
+          128.5,
+          94.5
+        ],
+        "head_width": 84,
+        "head_top_y": 53,
+        "head_bottom_y": 136,
+        "face_center": [
+          128.5,
+          125.0
+        ],
+        "face_width": 60
+      },
+      "sit_type_b": {
+        "head_center": [
+          129.0,
+          94.5
+        ],
+        "head_width": 83,
+        "head_top_y": 53,
+        "head_bottom_y": 136,
+        "face_center": [
+          129.0,
+          124.5
+        ],
+        "face_width": 61
+      },
+      "walk_1": {
+        "head_center": [
+          128.5,
+          92.5
+        ],
+        "head_width": 84,
+        "head_top_y": 51,
+        "head_bottom_y": 134,
+        "face_center": [
+          128.5,
+          122.5
+        ],
+        "face_width": 60
+      },
+      "walk_2": {
+        "head_center": [
+          128.0,
+          91.0
+        ],
+        "head_width": 83,
+        "head_top_y": 50,
+        "head_bottom_y": 132,
+        "face_center": [
+          128.5,
+          120.5
+        ],
+        "face_width": 60
+      },
+      "drink": {
+        "head_center": [
+          127.5,
+          91.5
+        ],
+        "head_width": 84,
+        "head_top_y": 51,
+        "head_bottom_y": 132,
+        "face_center": [
+          129.0,
+          121.0
+        ],
+        "face_width": 61
+      },
+      "hold_cup": {
+        "head_center": [
+          128.5,
+          91.5
+        ],
+        "head_width": 84,
+        "head_top_y": 51,
+        "head_bottom_y": 132,
+        "face_center": [
+          129.5,
+          121.0
+        ],
+        "face_width": 60
+      },
+      "talk": {
+        "head_center": [
+          128.5,
+          91.5
+        ],
+        "head_width": 84,
+        "head_top_y": 51,
+        "head_bottom_y": 132,
+        "face_center": [
+          129.5,
+          121.0
+        ],
+        "face_width": 60
+      },
+      "think": {
+        "head_center": [
+          128.5,
+          91.0
+        ],
+        "head_width": 84,
+        "head_top_y": 50,
+        "head_bottom_y": 132,
+        "face_center": [
+          128.5,
+          121.0
+        ],
+        "face_width": 60
+      },
+      "stretch": {
+        "head_center": [
+          135.5,
+          87.0
+        ],
+        "head_width": 76,
+        "head_top_y": 41,
+        "head_bottom_y": 133,
+        "face_center": [
+          124.5,
+          116.5
+        ],
+        "face_width": 54
+      }
+    },
+    "staff04": {
+      "stand": {
+        "head_center": [
+          129.5,
+          92.0
+        ],
+        "head_width": 82,
+        "head_top_y": 52,
+        "head_bottom_y": 132,
+        "face_center": [
+          127.0,
+          118.0
+        ],
+        "face_width": 61
+      },
+      "sit_type_a": {
+        "head_center": [
+          128.5,
+          95.5
+        ],
+        "head_width": 82,
+        "head_top_y": 55,
+        "head_bottom_y": 136,
+        "face_center": [
+          119.0,
+          122.0
+        ],
+        "face_width": 43
+      },
+      "sit_type_b": {
+        "head_center": [
+          129.5,
+          100.5
+        ],
+        "head_width": 82,
+        "head_top_y": 55,
+        "head_bottom_y": 146,
+        "face_center": [
+          118.5,
+          129.5
+        ],
+        "face_width": 44
+      },
+      "walk_1": {
+        "head_center": [
+          132.0,
+          93.5
+        ],
+        "head_width": 89,
+        "head_top_y": 53,
+        "head_bottom_y": 134,
+        "face_center": [
+          118.0,
+          119.5
+        ],
+        "face_width": 45
+      },
+      "walk_2": {
+        "head_center": [
+          129.0,
+          92.0
+        ],
+        "head_width": 83,
+        "head_top_y": 52,
+        "head_bottom_y": 132,
+        "face_center": [
+          118.5,
+          118.0
+        ],
+        "face_width": 44
+      },
+      "drink": {
+        "head_center": [
+          128.5,
+          92.0
+        ],
+        "head_width": 82,
+        "head_top_y": 52,
+        "head_bottom_y": 132,
+        "face_center": [
+          126.0,
+          118.0
+        ],
+        "face_width": 61
+      },
+      "hold_cup": {
+        "head_center": [
+          129.0,
+          92.0
+        ],
+        "head_width": 83,
+        "head_top_y": 52,
+        "head_bottom_y": 132,
+        "face_center": [
+          127.0,
+          118.0
+        ],
+        "face_width": 61
+      },
+      "talk": {
+        "head_center": [
+          128.5,
+          92.0
+        ],
+        "head_width": 82,
+        "head_top_y": 52,
+        "head_bottom_y": 132,
+        "face_center": [
+          126.0,
+          118.0
+        ],
+        "face_width": 61
+      },
+      "think": {
+        "head_center": [
+          129.5,
+          99.0
+        ],
+        "head_width": 82,
+        "head_top_y": 52,
+        "head_bottom_y": 146,
+        "face_center": [
+          118.5,
+          128.0
+        ],
+        "face_width": 44
+      },
+      "stretch": {
+        "head_center": [
+          135.0,
+          90.5
+        ],
+        "head_width": 75,
+        "head_top_y": 47,
+        "head_bottom_y": 134,
+        "face_center": [
+          125.5,
+          114.0
+        ],
+        "face_width": 56
+      }
+    },
+    "staff05": {
+      "stand": {
+        "head_center": [
+          125.0,
+          95.5
+        ],
+        "head_width": 65,
+        "head_top_y": 59,
+        "head_bottom_y": 132,
+        "face_center": [
+          123.0,
+          112.0
+        ],
+        "face_width": 61
+      },
+      "sit_type_a": {
+        "head_center": [
+          124.5,
+          98.5
+        ],
+        "head_width": 62,
+        "head_top_y": 62,
+        "head_bottom_y": 135,
+        "face_center": [
+          123.5,
+          115.0
+        ],
+        "face_width": 60
+      },
+      "sit_type_b": {
+        "head_center": [
+          124.5,
+          99.0
+        ],
+        "head_width": 62,
+        "head_top_y": 62,
+        "head_bottom_y": 136,
+        "face_center": [
+          122.5,
+          116.0
+        ],
+        "face_width": 58
+      },
+      "walk_1": {
+        "head_center": [
+          123.5,
+          97.0
+        ],
+        "head_width": 62,
+        "head_top_y": 60,
+        "head_bottom_y": 134,
+        "face_center": [
+          121.5,
+          114.0
+        ],
+        "face_width": 58
+      },
+      "walk_2": {
+        "head_center": [
+          124.0,
+          95.0
+        ],
+        "head_width": 61,
+        "head_top_y": 58,
+        "head_bottom_y": 132,
+        "face_center": [
+          123.0,
+          112.0
+        ],
+        "face_width": 59
+      },
+      "drink": {
+        "head_center": [
+          124.5,
+          95.5
+        ],
+        "head_width": 62,
+        "head_top_y": 59,
+        "head_bottom_y": 132,
+        "face_center": [
+          124.0,
+          112.0
+        ],
+        "face_width": 61
+      },
+      "hold_cup": {
+        "head_center": [
+          125.5,
+          95.5
+        ],
+        "head_width": 62,
+        "head_top_y": 59,
+        "head_bottom_y": 132,
+        "face_center": [
+          122.5,
+          112.0
+        ],
+        "face_width": 56
+      },
+      "talk": {
+        "head_center": [
+          124.0,
+          95.5
+        ],
+        "head_width": 61,
+        "head_top_y": 59,
+        "head_bottom_y": 132,
+        "face_center": [
+          121.0,
+          112.0
+        ],
+        "face_width": 55
+      },
+      "think": {
+        "head_center": [
+          124.0,
+          95.5
+        ],
+        "head_width": 61,
+        "head_top_y": 59,
+        "head_bottom_y": 132,
+        "face_center": [
+          122.5,
+          112.0
+        ],
+        "face_width": 58
+      },
+      "stretch": {
+        "head_center": [
+          129.5,
+          88.0
+        ],
+        "head_width": 64,
+        "head_top_y": 49,
+        "head_bottom_y": 127,
+        "face_center": [
+          126.0,
+          106.0
+        ],
+        "face_width": 57
+      }
+    },
+    "staff06": {
+      "stand": {
+        "head_center": [
+          113.0,
+          92.0
+        ],
+        "head_width": 79,
+        "head_top_y": 52,
+        "head_bottom_y": 132,
+        "face_center": [
+          113.5,
+          118.0
+        ],
+        "face_width": 60
+      },
+      "sit_type_a": {
+        "head_center": [
+          112.0,
+          96.0
+        ],
+        "head_width": 81,
+        "head_top_y": 56,
+        "head_bottom_y": 136,
+        "face_center": [
+          105.5,
+          122.5
+        ],
+        "face_width": 44
+      },
+      "sit_type_b": {
+        "head_center": [
+          112.5,
+          96.0
+        ],
+        "head_width": 80,
+        "head_top_y": 56,
+        "head_bottom_y": 136,
+        "face_center": [
+          113.5,
+          122.0
+        ],
+        "face_width": 60
+      },
+      "walk_1": {
+        "head_center": [
+          112.0,
+          94.0
+        ],
+        "head_width": 79,
+        "head_top_y": 54,
+        "head_bottom_y": 134,
+        "face_center": [
+          113.0,
+          120.0
+        ],
+        "face_width": 61
+      },
+      "walk_2": {
+        "head_center": [
+          112.5,
+          92.0
+        ],
+        "head_width": 80,
+        "head_top_y": 52,
+        "head_bottom_y": 132,
+        "face_center": [
+          105.0,
+          118.0
+        ],
+        "face_width": 45
+      },
+      "drink": {
+        "head_center": [
+          113.0,
+          92.0
+        ],
+        "head_width": 77,
+        "head_top_y": 52,
+        "head_bottom_y": 132,
+        "face_center": [
+          112.5,
+          119.0
+        ],
+        "face_width": 60
+      },
+      "hold_cup": {
+        "head_center": [
+          112.5,
+          92.0
+        ],
+        "head_width": 78,
+        "head_top_y": 52,
+        "head_bottom_y": 132,
+        "face_center": [
+          112.5,
+          119.0
+        ],
+        "face_width": 60
+      },
+      "talk": {
+        "head_center": [
+          113.0,
+          92.0
+        ],
+        "head_width": 77,
+        "head_top_y": 52,
+        "head_bottom_y": 132,
+        "face_center": [
+          112.5,
+          119.0
+        ],
+        "face_width": 60
+      },
+      "think": {
+        "head_center": [
+          112.5,
+          92.5
+        ],
+        "head_width": 78,
+        "head_top_y": 53,
+        "head_bottom_y": 132,
+        "face_center": [
+          104.5,
+          118.0
+        ],
+        "face_width": 44
+      },
+      "stretch": {
+        "head_center": [
+          125.0,
+          90.0
+        ],
+        "head_width": 75,
+        "head_top_y": 47,
+        "head_bottom_y": 133,
+        "face_center": [
+          113.5,
+          114.5
+        ],
+        "face_width": 52
+      }
+    },
+    "staff07": {
+      "stand": {
+        "head_center": [
+          126.5,
+          91.0
+        ],
+        "head_width": 78,
+        "head_top_y": 52,
+        "head_bottom_y": 130,
+        "face_center": [
+          118.0,
+          116.0
+        ],
+        "face_width": 47
+      },
+      "sit_type_a": {
+        "head_center": [
+          128.0,
+          92.0
+        ],
+        "head_width": 75,
+        "head_top_y": 55,
+        "head_bottom_y": 129,
+        "face_center": [
+          118.0,
+          116.5
+        ],
+        "face_width": 47
+      },
+      "sit_type_b": {
+        "head_center": [
+          128.5,
+          92.0
+        ],
+        "head_width": 74,
+        "head_top_y": 56,
+        "head_bottom_y": 128,
+        "face_center": [
+          118.5,
+          115.0
+        ],
+        "face_width": 46
+      },
+      "walk_1": {
+        "head_center": [
+          130.0,
+          90.0
+        ],
+        "head_width": 71,
+        "head_top_y": 54,
+        "head_bottom_y": 126,
+        "face_center": [
+          118.0,
+          113.5
+        ],
+        "face_width": 47
+      },
+      "walk_2": {
+        "head_center": [
+          128.0,
+          88.5
+        ],
+        "head_width": 75,
+        "head_top_y": 52,
+        "head_bottom_y": 125,
+        "face_center": [
+          118.5,
+          112.5
+        ],
+        "face_width": 46
+      },
+      "drink": {
+        "head_center": [
+          126.5,
+          90.0
+        ],
+        "head_width": 78,
+        "head_top_y": 52,
+        "head_bottom_y": 128,
+        "face_center": [
+          118.0,
+          115.0
+        ],
+        "face_width": 47
+      },
+      "hold_cup": {
+        "head_center": [
+          126.5,
+          91.0
+        ],
+        "head_width": 78,
+        "head_top_y": 52,
+        "head_bottom_y": 130,
+        "face_center": [
+          118.5,
+          116.0
+        ],
+        "face_width": 46
+      },
+      "talk": {
+        "head_center": [
+          126.5,
+          89.5
+        ],
+        "head_width": 78,
+        "head_top_y": 52,
+        "head_bottom_y": 127,
+        "face_center": [
+          118.0,
+          114.0
+        ],
+        "face_width": 47
+      },
+      "think": {
+        "head_center": [
+          128.5,
+          88.0
+        ],
+        "head_width": 74,
+        "head_top_y": 52,
+        "head_bottom_y": 124,
+        "face_center": [
+          118.5,
+          111.5
+        ],
+        "face_width": 48
+      },
+      "stretch": {
+        "head_center": [
+          133.5,
+          80.5
+        ],
+        "head_width": 72,
+        "head_top_y": 47,
+        "head_bottom_y": 114,
+        "face_center": [
+          124.0,
+          100.0
+        ],
+        "face_width": 51
+      }
+    },
+    "staff08": {
+      "stand": {
+        "head_center": [
+          127.0,
+          92.0
+        ],
+        "head_width": 79,
+        "head_top_y": 52,
+        "head_bottom_y": 132,
+        "face_center": [
+          127.5,
+          120.0
+        ],
+        "face_width": 60
+      },
+      "sit_type_a": {
+        "head_center": [
+          126.5,
+          95.5
+        ],
+        "head_width": 80,
+        "head_top_y": 55,
+        "head_bottom_y": 136,
+        "face_center": [
+          128.0,
+          124.0
+        ],
+        "face_width": 61
+      },
+      "sit_type_b": {
+        "head_center": [
+          127.5,
+          96.0
+        ],
+        "head_width": 78,
+        "head_top_y": 56,
+        "head_bottom_y": 136,
+        "face_center": [
+          128.0,
+          124.0
+        ],
+        "face_width": 61
+      },
+      "walk_1": {
+        "head_center": [
+          127.5,
+          94.0
+        ],
+        "head_width": 78,
+        "head_top_y": 54,
+        "head_bottom_y": 134,
+        "face_center": [
+          128.0,
+          122.0
+        ],
+        "face_width": 61
+      },
+      "walk_2": {
+        "head_center": [
+          126.5,
+          92.0
+        ],
+        "head_width": 80,
+        "head_top_y": 52,
+        "head_bottom_y": 132,
+        "face_center": [
+          127.5,
+          120.0
+        ],
+        "face_width": 60
+      },
+      "drink": {
+        "head_center": [
+          127.0,
+          92.0
+        ],
+        "head_width": 79,
+        "head_top_y": 52,
+        "head_bottom_y": 132,
+        "face_center": [
+          127.5,
+          119.5
+        ],
+        "face_width": 60
+      },
+      "hold_cup": {
+        "head_center": [
+          127.0,
+          92.0
+        ],
+        "head_width": 79,
+        "head_top_y": 52,
+        "head_bottom_y": 132,
+        "face_center": [
+          127.5,
+          120.0
+        ],
+        "face_width": 60
+      },
+      "talk": {
+        "head_center": [
+          126.5,
+          92.0
+        ],
+        "head_width": 80,
+        "head_top_y": 52,
+        "head_bottom_y": 132,
+        "face_center": [
+          127.5,
+          119.5
+        ],
+        "face_width": 60
+      },
+      "think": {
+        "head_center": [
+          127.0,
+          92.0
+        ],
+        "head_width": 79,
+        "head_top_y": 52,
+        "head_bottom_y": 132,
+        "face_center": [
+          128.0,
+          120.0
+        ],
+        "face_width": 61
+      },
+      "stretch": {
+        "head_center": [
+          135.0,
+          91.0
+        ],
+        "head_width": 75,
+        "head_top_y": 48,
+        "head_bottom_y": 134,
+        "face_center": [
+          125.0,
+          117.0
+        ],
+        "face_width": 55
+      }
+    }
+  },
+  "staff_heads_rule": "per staff/pose, 256 canvas coords: head = largest hair blob + face down to the chin; face = largest skin blob in the upper 60%",
+  "masks": {
+    "dir": "masks/<staff>/<pose>.png",
+    "format": "256x256 lossless PNG, pixel-aligned with game/staff/<staff>/<pose>.webp",
+    "values_R": {
+      "0": "background/other (outline, eyes, cups, props, accessories) - keep original colour",
+      "1": "skin",
+      "2": "hair (incl. beard)",
+      "3": "top",
+      "4": "bottom",
+      "5": "shoes"
+    },
+    "recolor_hint": "per region: keep each pixel's lightness (cel-shade steps), replace hue/saturation with the target colour"
+  }
+}
