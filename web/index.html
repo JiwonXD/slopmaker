@@ -104,6 +104,12 @@ button{font:inherit;color:inherit;border:0;background:none;padding:0}
 .db.on{background:var(--sun)}
 .db .k{font-family:var(--display);font-size:11px;line-height:1;color:var(--ink-2);border:1.5px solid var(--ink-3);border-bottom-width:3px;border-radius:5px;padding:2px 5px 1px}
 .db .badge{position:absolute;top:-6px;right:-4px;min-width:22px;height:22px;border-radius:11px;background:var(--coral);color:var(--paper);border:2px solid var(--ink);font-family:var(--display);font-size:12px;display:grid;place-items:center;padding:0 4px}
+/* ---------- 사운드 토글 ---------- */
+.snd{position:fixed;right:16px;bottom:16px;display:flex;gap:4px;padding:5px;background:var(--paper);border:2.5px solid var(--ink);border-radius:16px;box-shadow:var(--lift);z-index:55}
+.snd button{position:relative;width:38px;height:36px;border-radius:11px;display:grid;place-items:center;color:var(--ink);transition:background .15s var(--ease)}
+.snd button:hover{background:var(--paper-2)}
+.snd button.off{color:var(--ink-3)}
+.snd button.off::after{content:'';position:absolute;left:8px;right:8px;top:50%;height:3px;margin-top:-1.5px;border-radius:2px;background:var(--coral);box-shadow:0 0 0 2px var(--paper);transform:rotate(-45deg)}
 .dock .sep{width:2px;background:var(--paper-3);margin:6px 2px;border-radius:2px}
 
 /* ---------- 패널 공통 ---------- */
@@ -377,6 +383,8 @@ input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;bac
   <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 4l13 8-13 8z"/></symbol>
   <symbol id="i-cont" viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 2.4-5.7M4 4v4h4"/></symbol>
   <symbol id="i-desk" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></symbol>
+  <symbol id="i-music" viewBox="0 0 24 24"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></symbol>
+  <symbol id="i-vol" viewBox="0 0 24 24"><path d="M4 9h4l5-4v14l-5-4H4z"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></symbol>
   <symbol id="i-flag" viewBox="0 0 24 24"><path d="M5 21V4M5 4h11l-2 4 2 4H5"/></symbol>
 </svg>
 
@@ -427,6 +435,10 @@ input[type=range]::-moz-range-thumb{width:20px;height:20px;border-radius:50%;bac
 
 <div class="end" id="end" hidden></div>
 <div class="wipe" id="wipe"><div class="h t"></div><div class="h b"></div><div class="badge"><svg viewBox="0 0 40 40"><use href="#logo-mark"/></svg></div></div>
+<div class="snd" id="snd">
+  <button data-snd="bgm" aria-label="배경음악"><svg class="ic"><use href="#i-music"/></svg></button>
+  <button data-snd="sfx" aria-label="효과음"><svg class="ic"><use href="#i-vol"/></svg></button>
+</div>
 <div id="fx"></div>
 <div class="tip" id="tip"></div>
 <div class="narrow" id="narrow"><svg class="ic"><use href="#i-desk"/></svg><b class="disp" style="font-size:22px">PC 화면용 게임이에요</b><button class="btn" id="narrowBtn">그래도 열기</button></div>
@@ -573,6 +585,7 @@ function acceptOffer(id, ev){
   // 놀고 있는 직원 자동 배치
   S.staff.filter(h=>!h.assign).forEach(h=>h.assign=c.id);
   log(`${o.client} ${T(o.type).name} 수주`, 'good');
+  SND.play('accept');
   moneyFloat(down);
   if(ev) burst(ev.clientX, ev.clientY, 10);
   select('ct', c.id);
@@ -696,6 +709,7 @@ function finish(c, outcome, pay, rep, sl, score, notes=[]){
   log(`${c.client} ${T(c.type).name} ${label} ${won(pay,true)}`, outcome==='claim'?'bad':'good');
   if(outcome==='great' && Math.random()<.6){ const o=mkOffer(T(c.type)); o.client=c.client; o.budget=Math.round(o.budget*1.1/10)*10; S.offers.unshift(o); toast('good','board',`${c.client} 재계약 문의`); }
   coinRain(pos.x,pos.y, outcome==='claim'?3:outcome==='great'?14:8);
+  SND.play(outcome==='great'?'great':outcome==='claim'?'claim':'coin');
   moneyFloat(pay);
   resultCard(c, outcome, label, pay, rep, sl, score, notes);
   renderUI(); save();
@@ -783,11 +797,13 @@ function gradeUp(g){
   $('#bannerText').textContent = GRADES[g].name;
   const b = $('#banner'); b.classList.add('on');
   burst(innerWidth/2, 120, 26);
+  SND.play('grade');
   setTimeout(()=>b.classList.remove('on'), 2600);
   OFF.layout(true);
 }
 function endGame(bankrupt){
   S.over = true; setSpeed(0);
+  SND.play(bankrupt?'claim':'grade');
   const g = gradeIdx();
   let title, line;
   if(bankrupt){ title='부도'; line='AI 구독만은 끝까지 유지됐다'; }
@@ -1290,7 +1306,7 @@ function gameClock(dt){
   if(running()){ weekAcc += dt*SPEEDS[speed]/WEEK_SEC; if(weekAcc>=1){ weekAcc=0; tick(); } }
   $('#wkbar').style.transform = `scaleX(${weekAcc})`;
 }
-function setSpeed(n){ if(n>0) lastSpeed=n; speed=n; renderClock(); }
+function setSpeed(n){ if(n>0) lastSpeed=n; speed=n; SND.muffle(n===0); renderClock(); }
 
 /* ================= 선택 / 패널 ================= */
 let SEL = null, DRAWER = null, TAB = {};
@@ -1463,10 +1479,12 @@ function decide({face, ribbon, col, who, say, opts}){
     <div class="say">${face}<div class="bubble">${esc(say)}</div></div>
     <div class="opts">${opts.map((o,i)=>`<button class="opt" data-opt="${i}" data-tip="${esc(o.label)}|${esc(o.tip||'')}"><span class="t"><b>${esc(o.label)}</b><span class="key">${i+1}</span></span><span class="facts">${o.chips.map(([n,v,k])=>`<span class="fact ${k}">${ic(n)}${esc(v)}</span>`).join('')}</span></button>`).join('')}</div></div>`;
   $('#decision').classList.add('open');
+  SND.play('alert');
 }
 function choose(i, ev){
   const fn = decideHandlers[i]; if(!fn) return;
   $('#decision').classList.remove('open'); decideHandlers = [];
+  SND.play('choose');
   fn(); if(ev) burst(ev.clientX||innerWidth/2, ev.clientY||innerHeight-160, 8);
   renderUI();
 }
@@ -1475,6 +1493,7 @@ function toast(kind, icon, title, line){
   el.className = `toast ${kind}`;
   el.innerHTML = `<span class="tic">${ic(icon)}</span><p><b>${esc(title)}</b>${line?esc(line):''}</p>`;
   const box = $('#toasts'); box.appendChild(el);
+  SND.play(kind==='good'?'good':kind==='bad'?'bad':'news');
   while(box.children.length>4) box.firstChild.remove();
   setTimeout(()=>{ el.classList.add('out'); setTimeout(()=>el.remove(),320); }, 4200);
 }
@@ -1523,7 +1542,7 @@ function coinRain(x,y,n){
   setTimeout(()=>{ if(m) m.animate([{transform:'scale(1)'},{transform:'scale(1.12)'},{transform:'scale(1)'}],{duration:260,easing:'cubic-bezier(.22,1,.36,1)'}); }, 900);
 }
 // 전역 클릭 이펙트
-addEventListener('pointerdown', e=>{ hideTip(); if(e.button===0) clickRing(e.clientX, e.clientY, !!e.target.closest('button')); });
+addEventListener('pointerdown', e=>{ hideTip(); if(e.button===0){ const hot = !!e.target.closest('button'); clickRing(e.clientX, e.clientY, hot); if(hot) SND.play('click'); } });
 
 /* ================= 툴팁 ================= */
 const TIP = $('#tip'); let tipTimer=null;
@@ -1550,6 +1569,7 @@ document.addEventListener('pointermove', e=>{
 document.addEventListener('click', e=>{
   const g = (sel)=>e.target.closest(sel);
   let b;
+  if(b=g('[data-snd]')) return SND.toggle(b.dataset.snd);
   if(b=g('[data-spd]')) return setSpeed(+b.dataset.spd);
   if(b=g('[data-drawer]')) return openDrawer(b.dataset.drawer);
   if(b=g('[data-close]')){ if(b.dataset.close==='drawer'){ DRAWER=null; renderDrawer(); renderDock(); } else select(null); return; }
@@ -1577,6 +1597,8 @@ document.addEventListener('input', e=>{
 document.addEventListener('pointerdown', e=>{ if(e.target.id==='slop') sliderHeld=true; });
 document.addEventListener('pointerup', ()=>{ if(sliderHeld){ sliderHeld=false; save(); renderInspector(); } });
 addEventListener('keydown', e=>{
+  const sk = {m:'bgm', n:'sfx'}[e.key.toLowerCase()];
+  if(sk && !e.repeat && !coachOn){ SND.toggle(sk); return; }
   if(!started){ if(e.key==='Enter') $('#newBtn').click(); if((e.key==='c'||e.key==='C') && !$('#contBtn').hidden) $('#contBtn').click(); return; }
   if(coachOn) { if(e.key==='Enter'||e.key===' '){ e.preventDefault(); coachNext(); } return; }
   if(e.target.tagName==='INPUT' && e.key!=='Escape') return;
@@ -1644,6 +1666,133 @@ function load(){ try{ const s=localStorage.getItem(KEY); return s? JSON.parse(s)
   const u = s => `url("data:image/svg+xml,${encodeURIComponent(s)}") 5 3`;
   document.documentElement.style.setProperty('--cur', `${u(mk('#FBF8F1'))}, default`);
   document.documentElement.style.setProperty('--cur-hot', `${u(mk('#F2C94C'))}, pointer`);
+})();
+
+/* ================= 사운드 ================= */
+// 외부 음원 없이 Web Audio 로 합성. 브라우저 자동재생 정책 때문에 첫 클릭이나 키 입력 때 시작
+const SND = (()=>{
+  const PREF = 'slopmaker-sound';
+  const pref = {bgm:true, sfx:true};
+  try{ Object.assign(pref, JSON.parse(localStorage.getItem(PREF)||'{}')); }catch(e){}
+  const hz = n => 440*Math.pow(2,(n-69)/12);
+  let ac = null, sfxBus, bgmBus, bgmLP, noiseBuf, timer = null, nextT = 0, step = 0;
+  const last = {};
+
+  function unlock(){
+    if(ac){ if(ac.state==='suspended' && !document.hidden) ac.resume(); return; }
+    const AC = window.AudioContext || window.webkitAudioContext; if(!AC) return;
+    ac = new AC();
+    const out = ac.createDynamicsCompressor(); out.connect(ac.destination);
+    sfxBus = ac.createGain(); sfxBus.gain.value = pref.sfx? .55 : 0; sfxBus.connect(out);
+    bgmLP = ac.createBiquadFilter(); bgmLP.type = 'lowpass'; bgmLP.frequency.value = 18000; bgmLP.connect(out);
+    bgmBus = ac.createGain(); bgmBus.gain.value = 0; bgmBus.connect(bgmLP);
+    noiseBuf = ac.createBuffer(1, ac.sampleRate*.5, ac.sampleRate);
+    const d = noiseBuf.getChannelData(0); for(let i=0;i<d.length;i++) d[i] = Math.random()*2-1;
+    if(speed===0) muffle(true);
+    if(pref.bgm) bgm(true);
+  }
+  function tone(f, t, dur, {type='triangle', vol=.2, to=0, bus=sfxBus, a=.006}={}){
+    const o = ac.createOscillator(), g = ac.createGain();
+    o.type = type; o.frequency.setValueAtTime(f, t);
+    if(to) o.frequency.exponentialRampToValueAtTime(to, t+dur);
+    g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(vol, t+a); g.gain.exponentialRampToValueAtTime(.0001, t+dur);
+    o.connect(g); g.connect(bus); o.start(t); o.stop(t+dur+.02);
+  }
+  function noise(t, dur, {vol=.1, freq=6000, kind='highpass', bus=sfxBus}={}){
+    const s = ac.createBufferSource(), f = ac.createBiquadFilter(), g = ac.createGain();
+    s.buffer = noiseBuf; f.type = kind; f.frequency.value = freq;
+    g.gain.setValueAtTime(vol, t); g.gain.exponentialRampToValueAtTime(.0001, t+dur);
+    s.connect(f); f.connect(g); g.connect(bus); s.start(t); s.stop(t+dur+.02);
+  }
+  const arp = (t, notes, gap, dur, o) => notes.forEach((n,i)=>tone(hz(n), t+i*gap, dur, o));
+
+  // 효과음
+  const FX = {
+    click:  t => tone(1500, t, .045, {vol:.1, to:900}),
+    accept: t => { tone(hz(83), t, .07, {type:'square', vol:.07}); tone(hz(88), t+.07, .32, {type:'square', vol:.07}); noise(t+.07, .25, {vol:.05, freq:8000}); },
+    coin:   t => { tone(hz(88), t, .07, {type:'square', vol:.06}); tone(hz(95), t+.06, .26, {type:'square', vol:.06}); },
+    good:   t => arp(t, [79,83,86], .07, .3, {vol:.16}),
+    bad:    t => { tone(hz(64), t, .16, {type:'square', vol:.06, to:hz(61)}); tone(hz(59), t+.17, .3, {type:'square', vol:.06, to:hz(54)}); },
+    news:   t => { tone(hz(79), t, .12, {vol:.16}); tone(hz(74), t+.11, .2, {vol:.16}); },
+    alert:  t => { tone(hz(84), t, .45, {type:'sine', vol:.22}); tone(hz(79), t+.2, .6, {type:'sine', vol:.22}); },
+    choose: t => tone(hz(72), t, .14, {vol:.18, to:hz(79)}),
+    great:  t => { arp(t, [72,76,79,84], .08, .22, {type:'square', vol:.06}); [72,76,79,84].forEach(n=>tone(hz(n), t+.34, .7, {vol:.08})); },
+    claim:  t => { [67,66,65].forEach((n,i)=>tone(hz(n), t+i*.24, .24, {type:'sawtooth', vol:.05})); tone(hz(64), t+.72, .8, {type:'sawtooth', vol:.05, to:hz(60)}); },
+    grade:  t => { arp(t, [72,76,79,84,88,91], .07, .2, {type:'square', vol:.06}); [72,76,79,84].forEach(n=>tone(hz(n), t+.45, 1.1, {vol:.09})); noise(t+.45, .6, {vol:.06, freq:7000}); },
+  };
+  function play(name){
+    if(!ac || !pref.sfx || ac.state!=='running') return;
+    const t = ac.currentTime;
+    if(last[name] && t-last[name] < .07) return;
+    last[name] = t; FX[name](t+.01);
+  }
+
+  // 배경음악: F장조 8마디 진행 위에 16분음표 스텝 시퀀서. 멜로디는 고정 시드로 매번 같은 곡
+  const STEP = 60/108/4;
+  const PROG = [[53,57,60],[50,53,57],[46,50,53],[48,52,55],[53,57,60],[45,48,52],[46,50,53],[48,52,55]];
+  const SCALE = [65,67,69,70,72,74,76,77,79,81,82,84];
+  const MEL = (()=>{
+    let seed = 7; const r = ()=>{ seed = (seed*16807) % 2147483647; return seed/2147483647; };
+    const RHY = [[0,4,6,10,12],[0,3,6,8,12,14],[2,4,8,10],[0,6,8,11,14]];
+    const song = []; let prev = 72;
+    for(let sec=0; sec<2; sec++) for(let bar=0; bar<8; bar++){
+      const ch = PROG[bar].map(n=>n%12), notes = {};
+      const rhy = bar===7? [0,4,8] : RHY[Math.floor(r()*RHY.length)];
+      rhy.forEach((s,i)=>{
+        const strong = s%8===0;
+        let pool = SCALE.filter(n=>!strong || ch.includes(n%12));
+        if(bar===7 && i===rhy.length-1) pool = [77];
+        pool.sort((a,b)=>Math.abs(a-prev)-Math.abs(b-prev));
+        const n = pool[Math.min(pool.length-1, Math.floor(r()*r()*4))];
+        notes[s] = [n, Math.min(3, (rhy[i+1]??16)-s)]; prev = n;
+      });
+      song.push(notes);
+    }
+    return song;
+  })();
+  function beat(t){
+    const bar = Math.floor(step/16) % MEL.length, s = step%16, ch = PROG[bar%8];
+    if(s===0 || s===8) tone(hz(s? ch[2] : ch[0]), t, STEP*3.5, {vol:.17, bus:bgmBus});
+    if(s===4 || s===12) ch.forEach(n=>tone(hz(n+12), t, STEP*1.6, {vol:.03, bus:bgmBus}));
+    if(s===0 || s===8) tone(140, t, .12, {type:'sine', vol:.18, to:50, bus:bgmBus});
+    if(s%4===2) noise(t, .04, {vol:.02, freq:7000, bus:bgmBus});
+    const m = MEL[bar][s]; if(m) tone(hz(m[0]), t, STEP*m[1]+.05, {type:'square', vol:.03, bus:bgmBus});
+  }
+  function pump(){
+    if(!ac || ac.state!=='running') return;
+    if(nextT < ac.currentTime) nextT = ac.currentTime+.05;
+    while(nextT < ac.currentTime+.15){ beat(nextT); nextT += STEP; step++; }
+  }
+  function bgm(on){
+    if(!ac) return;
+    bgmBus.gain.setTargetAtTime(on? .5 : 0, ac.currentTime, .3);
+    clearInterval(timer); timer = null;
+    if(on) timer = setInterval(pump, 30);
+  }
+  function muffle(on){ if(ac) bgmLP.frequency.setTargetAtTime(on? 650 : 18000, ac.currentTime, .15); }
+
+  // 음소거 토글
+  function render(){
+    [['bgm','배경음악'],['sfx','효과음']].forEach(([k,label])=>{
+      const b = document.querySelector(`[data-snd="${k}"]`); if(!b) return;
+      b.classList.toggle('off', !pref[k]);
+      b.dataset.tip = `${label} ${pref[k]?'끄기':'켜기'}|${k==='bgm'?'M':'N'}`;
+      b.setAttribute('aria-pressed', String(pref[k]));
+    });
+  }
+  function toggle(k){
+    pref[k] = !pref[k];
+    try{ localStorage.setItem(PREF, JSON.stringify(pref)); }catch(e){}
+    if(k==='bgm') bgm(pref.bgm);
+    else if(ac) sfxBus.gain.setTargetAtTime(pref.sfx? .55 : 0, ac.currentTime, .02);
+    render();
+  }
+
+  addEventListener('pointerdown', unlock, true);
+  addEventListener('keydown', unlock, true);
+  document.addEventListener('visibilitychange', ()=>{ if(!ac) return; document.hidden? ac.suspend() : ac.resume(); });
+  render();
+  return {play, toggle, muffle};
 })();
 
 /* ================= 부팅 ================= */
